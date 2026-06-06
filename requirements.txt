@@ -1,0 +1,17 @@
+# ALBA II longitudinal tracking — Python dependencies
+# Validated on Python 3.9 (cluster: SciPy-bundle/2022.05-foss-2022a,
+# matplotlib/3.5.2, OpenMPI/4.1.4). Pin to the versions actually validated
+# for the TFG before final submission.
+
+mbtrack2          # core tracking library (pip install mbtrack2; latest 0.9.1)
+mpi4py            # custom MPI layer; requires a system MPI (e.g. OpenMPI) present
+numpy
+scipy
+pandas
+matplotlib
+
+# Reference toolchain versions (foss-2022a), if you want to pin:
+#   numpy==1.22.3
+#   scipy==1.8.1
+#   pandas==1.4.2
+#   matplotlib==3.5.2

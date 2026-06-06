@@ -1,0 +1,24 @@
+# Generated simulation outputs
+results/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# Editor swap files
+*.swp
+*.swo
+*~
+
+# Jupyter (if used for analysis)
+.ipynb_checkpoints/
