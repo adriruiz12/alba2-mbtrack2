@@ -62,6 +62,7 @@ dependencies.
 
 ## Repository structure
 
+```
 alba2-mbtrack2/
 ├── README.md
 ├── .gitignore
@@ -77,6 +78,7 @@ alba2-mbtrack2/
 │   └── fs_vs_I/                ← fs_analytical.py, plot_fs_comparison.py,
 │                                 exp_*.csv (tracked inputs)
 └── results/                    ← generated at runtime, not tracked by git
+```
 
 ## How to run
 
