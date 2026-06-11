@@ -1,0 +1,37 @@
+
+!This file is a separate simulation to create an initial bunch
+
+
+&run_setup
+	lattice = A2L006C_20251112.lte
+	use_beamline = GB
+	p_central_mev = 3.0e3
+    output = bunch_ALBA_II.out
+&end
+
+&run_control 
+	n_steps = 1
+&end
+
+&rpn_load
+        filename = twiss_ALBA_II.twi
+        tag = "ref"
+&end
+
+!for a proper simulation, at least 10000 particles per bunch should be taken into account. 
+!sigma_dp, sigma_s - Fractional momentum spread, δ, and bunch length. Note that sigma_s is actually the length in βz *c*t, so that for βz << 1 the length of the bunch in time will be greater than one might expect.
+!For betas, average values
+
+&bunched_beam
+        n_particles_per_bunch = 10000
+        beta_x = 3.680811297008652,        
+        beta_y = 3.888776256698545,		
+        sigma_s =  0.002462010883796751,
+        sigma_dp = 0.001272853668017,
+        emit_x = 1.671614243984046e-10,
+        emit_y = 8.358071219920230e-11,
+        enforce_rms_values[0] = 3*3
+&end
+
+&track &end
+

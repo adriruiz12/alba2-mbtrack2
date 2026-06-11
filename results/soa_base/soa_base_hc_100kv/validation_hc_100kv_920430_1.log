@@ -1,0 +1,582 @@
+mbtrack2 version 0.9.1
+--------------------------------------------------
+If used in a publication, please cite mbtrack2 paper and the zenodo archive for the corresponding code version (and other papers for more specific features).
+[1] A. Gamelin, W. Foosang, N. Yamamoto, V. Gubaidulin and R. Nagaoka, “mbtrack2”. Zenodo, Jul. 11, 2025. doi: 10.5281/zenodo.15847797.
+[2] A. Gamelin, W. Foosang, and R. Nagaoka, “mbtrack2, a Collective Effect Library in Python”, presented at the 12th Int. Particle Accelerator Conf. (IPAC'21), Campinas, Brazil, May 2021, paper MOPAB070.
+
+
+
+=== PARAMSALBA-LIKE EQUILIBRIUM PRE-CHECK ===
+Model              : fixed active RF potential
+beam_equilibrium() : NOT used
+F                  : [1. 1.]
+PHI                : [0. 0.]
+Equilibrium sigma_z = 3.705 mm
+Equilibrium sigma_t = 12.358 ps
+Target sigma_z      = 3.731 mm
+Target sigma_t      = 12.445 ps
+Relative error      = -0.703%
+Center of mass      = 18.226 ps
+Energy balance      = -5.331342e+04
+NOTE: energy balance = -53313.4 V >> 0.
+      The synchronous phase is not at tau=0 for this case.
+      This is expected near the flat-potential condition (xi~1).
+      Pre-check sigma_z may differ from the paramsalba target.
+
+Local RF-potential diagnostics at z=0:
+V_RF(0)   = 1.126211e+06 V
+dV_RF(0)  = -9.414752e+06
+ddV_RF(0) = -5.668601e+07
+
+Cavity diagnostics:
+mc theta deg   = 59.934574
+mc theta_g deg = 16.344534
+mc psi deg     = -43.597066
+mc Vg          = 2.695941e+06 V
+mc Vb          = 1.911907e+06 V
+hc theta deg   = 259.023576
+hc theta_g deg = -25.527581
+hc psi deg     = 75.295785
+hc Vg          = 2.647755e+04 V
+hc Vb          = 3.941817e+05 V
+
+[VALIDATION CASE] hc_100kv
+[VALIDATION CASE] USE_HC = True
+[VALIDATION CASE] Target sigma_z = 3.730988 mm
+[VALIDATION CASE] Target sigma_t = 12.445238 ps
+[VALIDATION CASE] V_HC per cavity = 100.000000 kV
+[VALIDATION CASE] V_HC total      = 400.000000 kV
+
+[DIAGNOSTIC] ring.ac      = 1.043326e-04
+[DIAGNOSTIC] ring.sigma_delta  = 1.272854e-03
+[DIAGNOSTIC] ring.U0           = 1.072897e+06 eV
+[DIAGNOSTIC] ring.tau_z        = 6.063505e-03 s  (6762.6 turns)
+
+=== TRACKING STARTED ===
+MPI ranks          : 16
+Bunches/rank       : 28
+Turns              : 50000
+Macro/bunch        : 10000
+Filled bunches     : 448
+Current per bunch  : 0.669643 mA
+
+[12:47:29] Turn      1/50000 | sigma_t =    8.217 ps | sigma_z =    2.463 mm | tau =   -0.017 ps | err_MC = 8.32e-18 | err_HC = 2.09e-17 | block =     0.48 s | total =     0.48 s | avg/turn =   0.4814 s
+[12:48:13] Turn    100/50000 | sigma_t =   11.214 ps | sigma_z =    3.362 mm | tau =    4.121 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    44.03 s | total =    44.51 s | avg/turn =   0.4451 s
+[12:48:58] Turn    200/50000 | sigma_t =   12.129 ps | sigma_z =    3.636 mm | tau =   20.467 ps | err_MC = 4.40e-17 | err_HC = 0.00e+00 | block =    44.76 s | total =    89.27 s | avg/turn =   0.4463 s
+[12:49:43] Turn    300/50000 | sigma_t =    8.734 ps | sigma_z =    2.618 mm | tau =   34.875 ps | err_MC = 4.68e-17 | err_HC = 1.87e-17 | block =    45.29 s | total =   134.55 s | avg/turn =   0.4485 s
+[12:50:29] Turn    400/50000 | sigma_t =   10.284 ps | sigma_z =    3.083 mm | tau =   34.866 ps | err_MC = 4.89e-17 | err_HC = 1.87e-17 | block =    45.68 s | total =   180.24 s | avg/turn =   0.4506 s
+[12:51:15] Turn    500/50000 | sigma_t =   12.056 ps | sigma_z =    3.614 mm | tau =   21.033 ps | err_MC = 5.41e-17 | err_HC = 0.00e+00 | block =    46.05 s | total =   226.29 s | avg/turn =   0.4526 s
+[12:52:01] Turn    600/50000 | sigma_t =    9.715 ps | sigma_z =    2.912 mm | tau =    5.665 ps | err_MC = 5.05e-17 | err_HC = 0.00e+00 | block =    45.97 s | total =   272.25 s | avg/turn =   0.4538 s
+[12:52:48] Turn    700/50000 | sigma_t =   10.015 ps | sigma_z =    3.002 mm | tau =    1.539 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    47.10 s | total =   319.36 s | avg/turn =   0.4562 s
+[12:53:38] Turn    800/50000 | sigma_t =   12.410 ps | sigma_z =    3.721 mm | tau =   11.902 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    49.93 s | total =   369.28 s | avg/turn =   0.4616 s
+[12:54:31] Turn    900/50000 | sigma_t =   10.642 ps | sigma_z =    3.190 mm | tau =   27.820 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    52.60 s | total =   421.88 s | avg/turn =   0.4688 s
+[12:55:20] Turn   1000/50000 | sigma_t =    9.456 ps | sigma_z =    2.835 mm | tau =   35.447 ps | err_MC = 5.18e-17 | err_HC = 1.87e-17 | block =    49.30 s | total =   471.18 s | avg/turn =   0.4712 s
+[12:56:06] Turn   1100/50000 | sigma_t =   11.819 ps | sigma_z =    3.543 mm | tau =   28.432 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.67 s | total =   516.86 s | avg/turn =   0.4699 s
+[12:56:51] Turn   1200/50000 | sigma_t =   11.194 ps | sigma_z =    3.356 mm | tau =   13.407 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.66 s | total =   562.51 s | avg/turn =   0.4688 s
+[12:57:37] Turn   1300/50000 | sigma_t =    9.784 ps | sigma_z =    2.933 mm | tau =    3.242 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.41 s | total =   607.92 s | avg/turn =   0.4676 s
+[12:58:24] Turn   1400/50000 | sigma_t =   11.761 ps | sigma_z =    3.526 mm | tau =    6.234 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    47.07 s | total =   654.99 s | avg/turn =   0.4679 s
+[12:59:14] Turn   1500/50000 | sigma_t =   11.959 ps | sigma_z =    3.585 mm | tau =   19.710 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    50.08 s | total =   705.07 s | avg/turn =   0.4700 s
+[12:59:59] Turn   1600/50000 | sigma_t =    9.889 ps | sigma_z =    2.965 mm | tau =   32.004 ps | err_MC = 5.02e-17 | err_HC = 1.87e-17 | block =    45.01 s | total =   750.08 s | avg/turn =   0.4688 s
+[13:00:46] Turn   1700/50000 | sigma_t =   11.030 ps | sigma_z =    3.307 mm | tau =   32.489 ps | err_MC = 5.15e-17 | err_HC = 1.87e-17 | block =    46.85 s | total =   796.93 s | avg/turn =   0.4688 s
+[13:01:31] Turn   1800/50000 | sigma_t =   11.933 ps | sigma_z =    3.578 mm | tau =   21.196 ps | err_MC = 4.44e-17 | err_HC = 0.00e+00 | block =    45.38 s | total =   842.32 s | avg/turn =   0.4680 s
+[13:02:17] Turn   1900/50000 | sigma_t =   10.488 ps | sigma_z =    3.144 mm | tau =    8.175 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    46.24 s | total =   888.55 s | avg/turn =   0.4677 s
+[13:03:03] Turn   2000/50000 | sigma_t =   10.990 ps | sigma_z =    3.295 mm | tau =    4.294 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.41 s | total =   933.96 s | avg/turn =   0.4670 s
+[13:03:48] Turn   2100/50000 | sigma_t =   12.315 ps | sigma_z =    3.692 mm | tau =   12.616 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.36 s | total =   979.32 s | avg/turn =   0.4663 s
+[13:04:34] Turn   2200/50000 | sigma_t =   11.004 ps | sigma_z =    3.299 mm | tau =   25.950 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.66 s | total =  1024.98 s | avg/turn =   0.4659 s
+[13:05:19] Turn   2300/50000 | sigma_t =   10.495 ps | sigma_z =    3.146 mm | tau =   32.715 ps | err_MC = 5.13e-17 | err_HC = 1.87e-17 | block =    45.45 s | total =  1070.43 s | avg/turn =   0.4654 s
+[13:06:09] Turn   2400/50000 | sigma_t =   11.883 ps | sigma_z =    3.563 mm | tau =   27.261 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    49.22 s | total =  1119.65 s | avg/turn =   0.4665 s
+[13:07:01] Turn   2500/50000 | sigma_t =   11.376 ps | sigma_z =    3.410 mm | tau =   14.756 ps | err_MC = 4.31e-17 | err_HC = 0.00e+00 | block =    52.55 s | total =  1172.21 s | avg/turn =   0.4689 s
+[13:07:48] Turn   2600/50000 | sigma_t =   10.736 ps | sigma_z =    3.219 mm | tau =    5.941 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    46.53 s | total =  1218.74 s | avg/turn =   0.4687 s
+[13:08:36] Turn   2700/50000 | sigma_t =   11.996 ps | sigma_z =    3.596 mm | tau =    8.040 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    48.67 s | total =  1267.41 s | avg/turn =   0.4694 s
+[13:09:22] Turn   2800/50000 | sigma_t =   11.911 ps | sigma_z =    3.571 mm | tau =   19.132 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.52 s | total =  1312.92 s | avg/turn =   0.4689 s
+[13:10:08] Turn   2900/50000 | sigma_t =   10.687 ps | sigma_z =    3.204 mm | tau =   29.616 ps | err_MC = 4.50e-17 | err_HC = 0.00e+00 | block =    46.69 s | total =  1359.62 s | avg/turn =   0.4688 s
+[13:10:54] Turn   3000/50000 | sigma_t =   11.441 ps | sigma_z =    3.430 mm | tau =   30.444 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    45.56 s | total =  1405.17 s | avg/turn =   0.4684 s
+[13:11:40] Turn   3100/50000 | sigma_t =   11.884 ps | sigma_z =    3.563 mm | tau =   21.258 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.61 s | total =  1450.78 s | avg/turn =   0.4680 s
+[13:12:25] Turn   3200/50000 | sigma_t =   11.061 ps | sigma_z =    3.316 mm | tau =   10.239 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.79 s | total =  1496.57 s | avg/turn =   0.4677 s
+[13:13:11] Turn   3300/50000 | sigma_t =   11.529 ps | sigma_z =    3.456 mm | tau =    6.623 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    45.36 s | total =  1541.93 s | avg/turn =   0.4673 s
+[13:13:56] Turn   3400/50000 | sigma_t =   12.238 ps | sigma_z =    3.669 mm | tau =   13.276 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.64 s | total =  1587.57 s | avg/turn =   0.4669 s
+[13:14:42] Turn   3500/50000 | sigma_t =   11.344 ps | sigma_z =    3.401 mm | tau =   24.425 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.93 s | total =  1633.50 s | avg/turn =   0.4667 s
+[13:15:28] Turn   3600/50000 | sigma_t =   11.130 ps | sigma_z =    3.337 mm | tau =   30.404 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.19 s | total =  1678.69 s | avg/turn =   0.4663 s
+[13:16:14] Turn   3700/50000 | sigma_t =   11.917 ps | sigma_z =    3.573 mm | tau =   26.210 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    46.01 s | total =  1724.70 s | avg/turn =   0.4661 s
+[13:17:00] Turn   3800/50000 | sigma_t =   11.570 ps | sigma_z =    3.469 mm | tau =   15.828 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.94 s | total =  1770.63 s | avg/turn =   0.4660 s
+[13:17:45] Turn   3900/50000 | sigma_t =   11.327 ps | sigma_z =    3.396 mm | tau =    8.196 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.20 s | total =  1815.84 s | avg/turn =   0.4656 s
+[13:18:30] Turn   4000/50000 | sigma_t =   12.102 ps | sigma_z =    3.628 mm | tau =    9.594 ps | err_MC = 4.46e-17 | err_HC = 0.00e+00 | block =    45.54 s | total =  1861.38 s | avg/turn =   0.4653 s
+[13:19:17] Turn   4100/50000 | sigma_t =   11.934 ps | sigma_z =    3.578 mm | tau =   18.697 ps | err_MC = 5.31e-17 | err_HC = 0.00e+00 | block =    46.46 s | total =  1907.84 s | avg/turn =   0.4653 s
+[13:20:02] Turn   4200/50000 | sigma_t =   11.228 ps | sigma_z =    3.366 mm | tau =   27.623 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    45.27 s | total =  1953.11 s | avg/turn =   0.4650 s
+[13:20:49] Turn   4300/50000 | sigma_t =   11.686 ps | sigma_z =    3.504 mm | tau =   28.680 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    46.58 s | total =  1999.69 s | avg/turn =   0.4650 s
+[13:21:34] Turn   4400/50000 | sigma_t =   11.894 ps | sigma_z =    3.566 mm | tau =   21.242 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.62 s | total =  2045.31 s | avg/turn =   0.4648 s
+[13:22:20] Turn   4500/50000 | sigma_t =   11.461 ps | sigma_z =    3.436 mm | tau =   11.938 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    46.00 s | total =  2091.30 s | avg/turn =   0.4647 s
+[13:23:07] Turn   4600/50000 | sigma_t =   11.829 ps | sigma_z =    3.546 mm | tau =    8.594 ps | err_MC = 4.63e-17 | err_HC = 0.00e+00 | block =    46.69 s | total =  2137.99 s | avg/turn =   0.4648 s
+[13:23:53] Turn   4700/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   13.877 ps | err_MC = 5.41e-17 | err_HC = 0.00e+00 | block =    45.84 s | total =  2183.83 s | avg/turn =   0.4646 s
+[13:24:39] Turn   4800/50000 | sigma_t =   11.607 ps | sigma_z =    3.480 mm | tau =   23.182 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    46.23 s | total =  2230.06 s | avg/turn =   0.4646 s
+[13:25:25] Turn   4900/50000 | sigma_t =   11.514 ps | sigma_z =    3.452 mm | tau =   28.450 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.72 s | total =  2275.78 s | avg/turn =   0.4644 s
+[13:26:11] Turn   5000/50000 | sigma_t =   11.945 ps | sigma_z =    3.581 mm | tau =   25.266 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    46.28 s | total =  2322.06 s | avg/turn =   0.4644 s
+[13:26:57] Turn   5100/50000 | sigma_t =   11.733 ps | sigma_z =    3.518 mm | tau =   16.666 ps | err_MC = 4.55e-17 | err_HC = 0.00e+00 | block =    45.61 s | total =  2367.67 s | avg/turn =   0.4642 s
+[13:27:42] Turn   5200/50000 | sigma_t =   11.685 ps | sigma_z =    3.503 mm | tau =   10.077 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.87 s | total =  2413.53 s | avg/turn =   0.4641 s
+[13:28:28] Turn   5300/50000 | sigma_t =   12.152 ps | sigma_z =    3.643 mm | tau =   10.939 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    46.00 s | total =  2459.54 s | avg/turn =   0.4641 s
+[13:29:14] Turn   5400/50000 | sigma_t =   11.983 ps | sigma_z =    3.593 mm | tau =   18.393 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.33 s | total =  2504.87 s | avg/turn =   0.4639 s
+[13:30:00] Turn   5500/50000 | sigma_t =   11.577 ps | sigma_z =    3.471 mm | tau =   25.976 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    46.24 s | total =  2551.11 s | avg/turn =   0.4638 s
+[13:30:47] Turn   5600/50000 | sigma_t =   11.838 ps | sigma_z =    3.549 mm | tau =   27.164 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    46.62 s | total =  2597.73 s | avg/turn =   0.4639 s
+[13:31:33] Turn   5700/50000 | sigma_t =   11.926 ps | sigma_z =    3.575 mm | tau =   21.159 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    46.43 s | total =  2644.17 s | avg/turn =   0.4639 s
+[13:32:20] Turn   5800/50000 | sigma_t =   11.730 ps | sigma_z =    3.517 mm | tau =   13.317 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    46.64 s | total =  2690.81 s | avg/turn =   0.4639 s
+[13:33:06] Turn   5900/50000 | sigma_t =   12.005 ps | sigma_z =    3.599 mm | tau =   10.259 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    46.40 s | total =  2737.21 s | avg/turn =   0.4639 s
+[13:33:52] Turn   6000/50000 | sigma_t =   12.172 ps | sigma_z =    3.649 mm | tau =   14.435 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    46.02 s | total =  2783.22 s | avg/turn =   0.4639 s
+[13:34:37] Turn   6100/50000 | sigma_t =   11.804 ps | sigma_z =    3.539 mm | tau =   22.187 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.35 s | total =  2828.57 s | avg/turn =   0.4637 s
+[13:35:23] Turn   6200/50000 | sigma_t =   11.760 ps | sigma_z =    3.525 mm | tau =   26.806 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.46 s | total =  2874.03 s | avg/turn =   0.4636 s
+[13:36:08] Turn   6300/50000 | sigma_t =   11.974 ps | sigma_z =    3.590 mm | tau =   24.417 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    44.84 s | total =  2918.87 s | avg/turn =   0.4633 s
+[13:36:53] Turn   6400/50000 | sigma_t =   11.863 ps | sigma_z =    3.556 mm | tau =   17.314 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.03 s | total =  2963.90 s | avg/turn =   0.4631 s
+[13:37:38] Turn   6500/50000 | sigma_t =   11.905 ps | sigma_z =    3.569 mm | tau =   11.637 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.54 s | total =  3009.44 s | avg/turn =   0.4630 s
+[13:38:24] Turn   6600/50000 | sigma_t =   12.175 ps | sigma_z =    3.650 mm | tau =   12.097 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.51 s | total =  3054.95 s | avg/turn =   0.4629 s
+[13:39:10] Turn   6700/50000 | sigma_t =   12.037 ps | sigma_z =    3.609 mm | tau =   18.186 ps | err_MC = 5.26e-17 | err_HC = 0.00e+00 | block =    45.74 s | total =  3100.68 s | avg/turn =   0.4628 s
+[13:39:57] Turn   6800/50000 | sigma_t =   11.803 ps | sigma_z =    3.539 mm | tau =   24.615 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    47.52 s | total =  3148.20 s | avg/turn =   0.4630 s
+[13:40:42] Turn   6900/50000 | sigma_t =   11.934 ps | sigma_z =    3.578 mm | tau =   25.861 ps | err_MC = 4.63e-17 | err_HC = 0.00e+00 | block =    45.02 s | total =  3193.22 s | avg/turn =   0.4628 s
+[13:41:27] Turn   7000/50000 | sigma_t =   11.968 ps | sigma_z =    3.588 mm | tau =   21.034 ps | err_MC = 4.63e-17 | err_HC = 0.00e+00 | block =    44.72 s | total =  3237.95 s | avg/turn =   0.4626 s
+[13:42:13] Turn   7100/50000 | sigma_t =   11.906 ps | sigma_z =    3.569 mm | tau =   14.440 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    46.32 s | total =  3284.26 s | avg/turn =   0.4626 s
+[13:42:59] Turn   7200/50000 | sigma_t =   12.099 ps | sigma_z =    3.627 mm | tau =   11.662 ps | err_MC = 5.39e-17 | err_HC = 0.00e+00 | block =    45.62 s | total =  3329.88 s | avg/turn =   0.4625 s
+[13:43:44] Turn   7300/50000 | sigma_t =   12.164 ps | sigma_z =    3.647 mm | tau =   14.940 ps | err_MC = 5.28e-17 | err_HC = 0.00e+00 | block =    45.18 s | total =  3375.06 s | avg/turn =   0.4623 s
+[13:44:29] Turn   7400/50000 | sigma_t =   11.943 ps | sigma_z =    3.580 mm | tau =   21.390 ps | err_MC = 4.44e-17 | err_HC = 0.00e+00 | block =    45.55 s | total =  3420.60 s | avg/turn =   0.4622 s
+[13:45:15] Turn   7500/50000 | sigma_t =   11.914 ps | sigma_z =    3.572 mm | tau =   25.430 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.27 s | total =  3465.88 s | avg/turn =   0.4621 s
+[13:46:00] Turn   7600/50000 | sigma_t =   12.001 ps | sigma_z =    3.598 mm | tau =   23.668 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    44.79 s | total =  3510.67 s | avg/turn =   0.4619 s
+[13:46:45] Turn   7700/50000 | sigma_t =   11.957 ps | sigma_z =    3.585 mm | tau =   17.810 ps | err_MC = 4.44e-17 | err_HC = 0.00e+00 | block =    45.30 s | total =  3555.97 s | avg/turn =   0.4618 s
+[13:47:30] Turn   7800/50000 | sigma_t =   12.037 ps | sigma_z =    3.609 mm | tau =   12.929 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.30 s | total =  3601.26 s | avg/turn =   0.4617 s
+[13:48:15] Turn   7900/50000 | sigma_t =   12.181 ps | sigma_z =    3.652 mm | tau =   13.089 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    44.85 s | total =  3646.11 s | avg/turn =   0.4615 s
+[13:49:00] Turn   8000/50000 | sigma_t =   12.078 ps | sigma_z =    3.621 mm | tau =   18.052 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    45.42 s | total =  3691.54 s | avg/turn =   0.4614 s
+[13:49:49] Turn   8100/50000 | sigma_t =   11.952 ps | sigma_z =    3.583 mm | tau =   23.500 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    48.14 s | total =  3739.68 s | avg/turn =   0.4617 s
+[13:50:36] Turn   8200/50000 | sigma_t =   11.997 ps | sigma_z =    3.597 mm | tau =   24.757 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    47.57 s | total =  3787.25 s | avg/turn =   0.4619 s
+[13:51:23] Turn   8300/50000 | sigma_t =   11.999 ps | sigma_z =    3.597 mm | tau =   20.887 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    46.83 s | total =  3834.08 s | avg/turn =   0.4619 s
+[13:52:08] Turn   8400/50000 | sigma_t =   12.016 ps | sigma_z =    3.602 mm | tau =   15.349 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.35 s | total =  3879.44 s | avg/turn =   0.4618 s
+[13:52:55] Turn   8500/50000 | sigma_t =   12.148 ps | sigma_z =    3.642 mm | tau =   12.844 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    46.20 s | total =  3925.63 s | avg/turn =   0.4618 s
+[13:53:40] Turn   8600/50000 | sigma_t =   12.159 ps | sigma_z =    3.645 mm | tau =   15.405 ps | err_MC = 4.50e-17 | err_HC = 0.00e+00 | block =    45.34 s | total =  3970.98 s | avg/turn =   0.4617 s
+[13:54:25] Turn   8700/50000 | sigma_t =   12.034 ps | sigma_z =    3.608 mm | tau =   20.761 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.44 s | total =  4016.42 s | avg/turn =   0.4617 s
+[13:55:10] Turn   8800/50000 | sigma_t =   12.006 ps | sigma_z =    3.599 mm | tau =   24.281 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    44.72 s | total =  4061.14 s | avg/turn =   0.4615 s
+[13:55:55] Turn   8900/50000 | sigma_t =   12.025 ps | sigma_z =    3.605 mm | tau =   23.006 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    45.10 s | total =  4106.24 s | avg/turn =   0.4614 s
+[13:56:42] Turn   9000/50000 | sigma_t =   12.025 ps | sigma_z =    3.605 mm | tau =   18.185 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    46.77 s | total =  4153.01 s | avg/turn =   0.4614 s
+[13:57:29] Turn   9100/50000 | sigma_t =   12.114 ps | sigma_z =    3.632 mm | tau =   14.002 ps | err_MC = 5.26e-17 | err_HC = 0.00e+00 | block =    46.90 s | total =  4199.91 s | avg/turn =   0.4615 s
+[13:58:14] Turn   9200/50000 | sigma_t =   12.187 ps | sigma_z =    3.654 mm | tau =   13.947 ps | err_MC = 4.14e-17 | err_HC = 0.00e+00 | block =    45.22 s | total =  4245.13 s | avg/turn =   0.4614 s
+[13:58:59] Turn   9300/50000 | sigma_t =   12.116 ps | sigma_z =    3.632 mm | tau =   17.977 ps | err_MC = 5.15e-17 | err_HC = 0.00e+00 | block =    45.41 s | total =  4290.54 s | avg/turn =   0.4613 s
+[13:59:44] Turn   9400/50000 | sigma_t =   12.048 ps | sigma_z =    3.612 mm | tau =   22.583 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    44.73 s | total =  4335.28 s | avg/turn =   0.4612 s
+[14:00:30] Turn   9500/50000 | sigma_t =   12.046 ps | sigma_z =    3.611 mm | tau =   23.813 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    45.77 s | total =  4381.05 s | avg/turn =   0.4612 s
+[14:01:18] Turn   9600/50000 | sigma_t =   12.039 ps | sigma_z =    3.609 mm | tau =   20.724 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    47.99 s | total =  4429.04 s | avg/turn =   0.4614 s
+[14:02:04] Turn   9700/50000 | sigma_t =   12.092 ps | sigma_z =    3.625 mm | tau =   16.080 ps | err_MC = 5.05e-17 | err_HC = 0.00e+00 | block =    45.96 s | total =  4475.00 s | avg/turn =   0.4613 s
+[14:02:49] Turn   9800/50000 | sigma_t =   12.183 ps | sigma_z =    3.652 mm | tau =   13.833 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.48 s | total =  4520.49 s | avg/turn =   0.4613 s
+[14:03:36] Turn   9900/50000 | sigma_t =   12.169 ps | sigma_z =    3.648 mm | tau =   15.815 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    46.28 s | total =  4566.77 s | avg/turn =   0.4613 s
+[14:04:20] Turn  10000/50000 | sigma_t =   12.097 ps | sigma_z =    3.627 mm | tau =   20.259 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    44.67 s | total =  4611.44 s | avg/turn =   0.4611 s
+[14:05:05] Turn  10100/50000 | sigma_t =   12.071 ps | sigma_z =    3.619 mm | tau =   23.323 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.19 s | total =  4656.63 s | avg/turn =   0.4611 s
+[14:05:51] Turn  10200/50000 | sigma_t =   12.054 ps | sigma_z =    3.614 mm | tau =   22.427 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.65 s | total =  4702.27 s | avg/turn =   0.4610 s
+[14:06:36] Turn  10300/50000 | sigma_t =   12.074 ps | sigma_z =    3.620 mm | tau =   18.466 ps | err_MC = 5.24e-17 | err_HC = 0.00e+00 | block =    45.35 s | total =  4747.62 s | avg/turn =   0.4609 s
+[14:07:22] Turn  10400/50000 | sigma_t =   12.158 ps | sigma_z =    3.645 mm | tau =   14.881 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.37 s | total =  4792.99 s | avg/turn =   0.4609 s
+[14:08:07] Turn  10500/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   14.675 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    45.60 s | total =  4838.60 s | avg/turn =   0.4608 s
+[14:08:53] Turn  10600/50000 | sigma_t =   12.144 ps | sigma_z =    3.641 mm | tau =   17.945 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.43 s | total =  4884.03 s | avg/turn =   0.4608 s
+[14:09:38] Turn  10700/50000 | sigma_t =   12.107 ps | sigma_z =    3.630 mm | tau =   21.836 ps | err_MC = 5.22e-17 | err_HC = 0.00e+00 | block =    44.97 s | total =  4929.00 s | avg/turn =   0.4607 s
+[14:10:23] Turn  10800/50000 | sigma_t =   12.081 ps | sigma_z =    3.622 mm | tau =   23.013 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    45.42 s | total =  4974.42 s | avg/turn =   0.4606 s
+[14:11:09] Turn  10900/50000 | sigma_t =   12.071 ps | sigma_z =    3.619 mm | tau =   20.560 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.40 s | total =  5019.82 s | avg/turn =   0.4605 s
+[14:11:56] Turn  11000/50000 | sigma_t =   12.135 ps | sigma_z =    3.638 mm | tau =   16.673 ps | err_MC = 4.46e-17 | err_HC = 0.00e+00 | block =    47.08 s | total =  5066.90 s | avg/turn =   0.4606 s
+[14:12:42] Turn  11100/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   14.669 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    46.27 s | total =  5113.17 s | avg/turn =   0.4606 s
+[14:13:27] Turn  11200/50000 | sigma_t =   12.176 ps | sigma_z =    3.650 mm | tau =   16.185 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.29 s | total =  5158.47 s | avg/turn =   0.4606 s
+[14:14:13] Turn  11300/50000 | sigma_t =   12.138 ps | sigma_z =    3.639 mm | tau =   19.864 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.51 s | total =  5203.98 s | avg/turn =   0.4605 s
+[14:14:58] Turn  11400/50000 | sigma_t =   12.112 ps | sigma_z =    3.631 mm | tau =   22.519 ps | err_MC = 5.24e-17 | err_HC = 0.00e+00 | block =    45.35 s | total =  5249.33 s | avg/turn =   0.4605 s
+[14:15:45] Turn  11500/50000 | sigma_t =   12.076 ps | sigma_z =    3.620 mm | tau =   21.915 ps | err_MC = 5.37e-17 | err_HC = 0.00e+00 | block =    46.40 s | total =  5295.73 s | avg/turn =   0.4605 s
+[14:16:32] Turn  11600/50000 | sigma_t =   12.108 ps | sigma_z =    3.630 mm | tau =   18.672 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    46.99 s | total =  5342.72 s | avg/turn =   0.4606 s
+[14:17:17] Turn  11700/50000 | sigma_t =   12.185 ps | sigma_z =    3.653 mm | tau =   15.614 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.41 s | total =  5388.13 s | avg/turn =   0.4605 s
+[14:18:02] Turn  11800/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   15.308 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.33 s | total =  5433.46 s | avg/turn =   0.4605 s
+[14:18:47] Turn  11900/50000 | sigma_t =   12.165 ps | sigma_z =    3.647 mm | tau =   17.950 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    44.71 s | total =  5478.17 s | avg/turn =   0.4604 s
+[14:19:32] Turn  12000/50000 | sigma_t =   12.144 ps | sigma_z =    3.641 mm | tau =   21.227 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    45.09 s | total =  5523.26 s | avg/turn =   0.4603 s
+[14:20:19] Turn  12100/50000 | sigma_t =   12.102 ps | sigma_z =    3.628 mm | tau =   22.331 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    46.83 s | total =  5570.09 s | avg/turn =   0.4603 s
+[14:21:04] Turn  12200/50000 | sigma_t =   12.094 ps | sigma_z =    3.626 mm | tau =   20.389 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    45.23 s | total =  5615.31 s | avg/turn =   0.4603 s
+[14:21:49] Turn  12300/50000 | sigma_t =   12.161 ps | sigma_z =    3.646 mm | tau =   17.144 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.12 s | total =  5660.43 s | avg/turn =   0.4602 s
+[14:22:35] Turn  12400/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   15.369 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.68 s | total =  5706.11 s | avg/turn =   0.4602 s
+[14:23:20] Turn  12500/50000 | sigma_t =   12.184 ps | sigma_z =    3.653 mm | tau =   16.523 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.34 s | total =  5751.45 s | avg/turn =   0.4601 s
+[14:24:06] Turn  12600/50000 | sigma_t =   12.167 ps | sigma_z =    3.647 mm | tau =   19.562 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.28 s | total =  5796.73 s | avg/turn =   0.4601 s
+[14:24:51] Turn  12700/50000 | sigma_t =   12.136 ps | sigma_z =    3.638 mm | tau =   21.854 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.63 s | total =  5842.35 s | avg/turn =   0.4600 s
+[14:25:38] Turn  12800/50000 | sigma_t =   12.101 ps | sigma_z =    3.628 mm | tau =   21.467 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    47.20 s | total =  5889.55 s | avg/turn =   0.4601 s
+[14:26:26] Turn  12900/50000 | sigma_t =   12.135 ps | sigma_z =    3.638 mm | tau =   18.815 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    47.63 s | total =  5937.18 s | avg/turn =   0.4602 s
+[14:27:14] Turn  13000/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   16.207 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    48.02 s | total =  5985.20 s | avg/turn =   0.4604 s
+[14:28:02] Turn  13100/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   15.841 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    47.60 s | total =  6032.81 s | avg/turn =   0.4605 s
+[14:28:47] Turn  13200/50000 | sigma_t =   12.181 ps | sigma_z =    3.652 mm | tau =   17.973 ps | err_MC = 4.46e-17 | err_HC = 0.00e+00 | block =    45.47 s | total =  6078.27 s | avg/turn =   0.4605 s
+[14:29:33] Turn  13300/50000 | sigma_t =   12.166 ps | sigma_z =    3.647 mm | tau =   20.735 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    45.58 s | total =  6123.85 s | avg/turn =   0.4604 s
+[14:30:18] Turn  13400/50000 | sigma_t =   12.123 ps | sigma_z =    3.634 mm | tau =   21.759 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.00 s | total =  6168.86 s | avg/turn =   0.4604 s
+[14:31:03] Turn  13500/50000 | sigma_t =   12.118 ps | sigma_z =    3.633 mm | tau =   20.225 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.20 s | total =  6214.06 s | avg/turn =   0.4603 s
+[14:31:48] Turn  13600/50000 | sigma_t =   12.178 ps | sigma_z =    3.651 mm | tau =   17.515 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.55 s | total =  6259.61 s | avg/turn =   0.4603 s
+[14:32:34] Turn  13700/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   15.947 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.44 s | total =  6305.05 s | avg/turn =   0.4602 s
+[14:33:19] Turn  13800/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   16.815 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.51 s | total =  6350.56 s | avg/turn =   0.4602 s
+[14:34:05] Turn  13900/50000 | sigma_t =   12.185 ps | sigma_z =    3.653 mm | tau =   19.328 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.54 s | total =  6396.10 s | avg/turn =   0.4602 s
+[14:34:52] Turn  14000/50000 | sigma_t =   12.155 ps | sigma_z =    3.644 mm | tau =   21.307 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    47.16 s | total =  6443.27 s | avg/turn =   0.4602 s
+[14:35:39] Turn  14100/50000 | sigma_t =   12.118 ps | sigma_z =    3.633 mm | tau =   21.083 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    47.08 s | total =  6490.34 s | avg/turn =   0.4603 s
+[14:36:27] Turn  14200/50000 | sigma_t =   12.155 ps | sigma_z =    3.644 mm | tau =   18.917 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    47.66 s | total =  6538.00 s | avg/turn =   0.4604 s
+[14:37:13] Turn  14300/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   16.697 ps | err_MC = 4.50e-17 | err_HC = 0.00e+00 | block =    45.98 s | total =  6583.98 s | avg/turn =   0.4604 s
+[14:38:01] Turn  14400/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   16.297 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    47.66 s | total =  6631.64 s | avg/turn =   0.4605 s
+[14:38:47] Turn  14500/50000 | sigma_t =   12.190 ps | sigma_z =    3.655 mm | tau =   18.013 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    46.60 s | total =  6678.24 s | avg/turn =   0.4606 s
+[14:39:33] Turn  14600/50000 | sigma_t =   12.181 ps | sigma_z =    3.652 mm | tau =   20.335 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    45.39 s | total =  6723.63 s | avg/turn =   0.4605 s
+[14:40:18] Turn  14700/50000 | sigma_t =   12.139 ps | sigma_z =    3.639 mm | tau =   21.272 ps | err_MC = 5.20e-17 | err_HC = 0.00e+00 | block =    45.30 s | total =  6768.93 s | avg/turn =   0.4605 s
+[14:41:03] Turn  14800/50000 | sigma_t =   12.137 ps | sigma_z =    3.638 mm | tau =   20.069 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.51 s | total =  6814.44 s | avg/turn =   0.4604 s
+[14:41:50] Turn  14900/50000 | sigma_t =   12.188 ps | sigma_z =    3.654 mm | tau =   17.811 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    46.44 s | total =  6860.89 s | avg/turn =   0.4605 s
+[14:42:38] Turn  15000/50000 | sigma_t =   12.208 ps | sigma_z =    3.660 mm | tau =   16.437 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    48.07 s | total =  6908.96 s | avg/turn =   0.4606 s
+[14:43:25] Turn  15100/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   17.083 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    46.98 s | total =  6955.94 s | avg/turn =   0.4607 s
+[14:44:11] Turn  15200/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   19.153 ps | err_MC = 5.22e-17 | err_HC = 0.00e+00 | block =    46.02 s | total =  7001.96 s | avg/turn =   0.4607 s
+[14:44:59] Turn  15300/50000 | sigma_t =   12.165 ps | sigma_z =    3.647 mm | tau =   20.853 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    48.04 s | total =  7050.00 s | avg/turn =   0.4608 s
+[14:45:46] Turn  15400/50000 | sigma_t =   12.134 ps | sigma_z =    3.638 mm | tau =   20.747 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    47.59 s | total =  7097.59 s | avg/turn =   0.4609 s
+[14:46:34] Turn  15500/50000 | sigma_t =   12.167 ps | sigma_z =    3.648 mm | tau =   18.981 ps | err_MC = 4.53e-17 | err_HC = 0.00e+00 | block =    47.99 s | total =  7145.58 s | avg/turn =   0.4610 s
+[14:47:22] Turn  15600/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   17.095 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    47.71 s | total =  7193.29 s | avg/turn =   0.4611 s
+[14:48:07] Turn  15700/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   16.688 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    44.92 s | total =  7238.21 s | avg/turn =   0.4610 s
+[14:48:53] Turn  15800/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.066 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    45.51 s | total =  7283.72 s | avg/turn =   0.4610 s
+[14:49:38] Turn  15900/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   20.014 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.45 s | total =  7329.17 s | avg/turn =   0.4610 s
+[14:50:23] Turn  16000/50000 | sigma_t =   12.153 ps | sigma_z =    3.643 mm | tau =   20.862 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.27 s | total =  7374.44 s | avg/turn =   0.4609 s
+[14:51:10] Turn  16100/50000 | sigma_t =   12.152 ps | sigma_z =    3.643 mm | tau =   19.922 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    46.47 s | total =  7420.91 s | avg/turn =   0.4609 s
+[14:51:58] Turn  16200/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.046 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    47.92 s | total =  7468.83 s | avg/turn =   0.4610 s
+[14:52:45] Turn  16300/50000 | sigma_t =   12.207 ps | sigma_z =    3.660 mm | tau =   16.844 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    47.25 s | total =  7516.08 s | avg/turn =   0.4611 s
+[14:53:30] Turn  16400/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   17.315 ps | err_MC = 4.40e-17 | err_HC = 0.00e+00 | block =    45.23 s | total =  7561.31 s | avg/turn =   0.4611 s
+[14:54:15] Turn  16500/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   19.020 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    44.82 s | total =  7606.13 s | avg/turn =   0.4610 s
+[14:55:00] Turn  16600/50000 | sigma_t =   12.175 ps | sigma_z =    3.650 mm | tau =   20.480 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.02 s | total =  7651.15 s | avg/turn =   0.4609 s
+[14:55:45] Turn  16700/50000 | sigma_t =   12.147 ps | sigma_z =    3.642 mm | tau =   20.459 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    44.89 s | total =  7696.04 s | avg/turn =   0.4608 s
+[14:56:30] Turn  16800/50000 | sigma_t =   12.177 ps | sigma_z =    3.651 mm | tau =   19.019 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    44.84 s | total =  7740.89 s | avg/turn =   0.4608 s
+[14:57:15] Turn  16900/50000 | sigma_t =   12.210 ps | sigma_z =    3.660 mm | tau =   17.421 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.14 s | total =  7786.03 s | avg/turn =   0.4607 s
+[14:58:00] Turn  17000/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   17.018 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    44.88 s | total =  7830.91 s | avg/turn =   0.4606 s
+[14:58:46] Turn  17100/50000 | sigma_t =   12.203 ps | sigma_z =    3.659 mm | tau =   18.118 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    46.02 s | total =  7876.93 s | avg/turn =   0.4606 s
+[14:59:32] Turn  17200/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   19.753 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.77 s | total =  7922.70 s | avg/turn =   0.4606 s
+[15:00:16] Turn  17300/50000 | sigma_t =   12.163 ps | sigma_z =    3.646 mm | tau =   20.520 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    44.72 s | total =  7967.42 s | avg/turn =   0.4605 s
+[15:01:01] Turn  17400/50000 | sigma_t =   12.161 ps | sigma_z =    3.646 mm | tau =   19.793 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    44.98 s | total =  8012.40 s | avg/turn =   0.4605 s
+[15:01:46] Turn  17500/50000 | sigma_t =   12.197 ps | sigma_z =    3.656 mm | tau =   18.230 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    44.79 s | total =  8057.18 s | avg/turn =   0.4604 s
+[15:02:31] Turn  17600/50000 | sigma_t =   12.209 ps | sigma_z =    3.660 mm | tau =   17.178 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    44.69 s | total =  8101.87 s | avg/turn =   0.4603 s
+[15:03:17] Turn  17700/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   17.515 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.94 s | total =  8147.81 s | avg/turn =   0.4603 s
+[15:04:04] Turn  17800/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.916 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    47.22 s | total =  8195.03 s | avg/turn =   0.4604 s
+[15:04:50] Turn  17900/50000 | sigma_t =   12.183 ps | sigma_z =    3.653 mm | tau =   20.166 ps | err_MC = 5.15e-17 | err_HC = 0.00e+00 | block =    45.67 s | total =  8240.70 s | avg/turn =   0.4604 s
+[15:05:34] Turn  18000/50000 | sigma_t =   12.157 ps | sigma_z =    3.645 mm | tau =   20.209 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    44.87 s | total =  8285.56 s | avg/turn =   0.4603 s
+[15:06:19] Turn  18100/50000 | sigma_t =   12.181 ps | sigma_z =    3.652 mm | tau =   19.045 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    44.80 s | total =  8330.36 s | avg/turn =   0.4602 s
+[15:07:04] Turn  18200/50000 | sigma_t =   12.208 ps | sigma_z =    3.660 mm | tau =   17.691 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    44.61 s | total =  8374.98 s | avg/turn =   0.4602 s
+[15:07:49] Turn  18300/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   17.299 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.12 s | total =  8420.09 s | avg/turn =   0.4601 s
+[15:08:34] Turn  18400/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   18.175 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    44.87 s | total =  8464.97 s | avg/turn =   0.4601 s
+[15:09:20] Turn  18500/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   19.542 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    46.12 s | total =  8511.08 s | avg/turn =   0.4601 s
+[15:10:07] Turn  18600/50000 | sigma_t =   12.168 ps | sigma_z =    3.648 mm | tau =   20.227 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    47.52 s | total =  8558.61 s | avg/turn =   0.4601 s
+[15:10:54] Turn  18700/50000 | sigma_t =   12.165 ps | sigma_z =    3.647 mm | tau =   19.668 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    46.07 s | total =  8604.68 s | avg/turn =   0.4601 s
+[15:11:38] Turn  18800/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.376 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    44.57 s | total =  8649.25 s | avg/turn =   0.4601 s
+[15:12:23] Turn  18900/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   17.464 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.05 s | total =  8694.30 s | avg/turn =   0.4600 s
+[15:13:10] Turn  19000/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   17.693 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    46.76 s | total =  8741.06 s | avg/turn =   0.4601 s
+[15:13:55] Turn  19100/50000 | sigma_t =   12.203 ps | sigma_z =    3.659 mm | tau =   18.838 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    45.13 s | total =  8786.19 s | avg/turn =   0.4600 s
+[15:14:40] Turn  19200/50000 | sigma_t =   12.183 ps | sigma_z =    3.652 mm | tau =   19.907 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    44.92 s | total =  8831.12 s | avg/turn =   0.4600 s
+[15:15:25] Turn  19300/50000 | sigma_t =   12.163 ps | sigma_z =    3.646 mm | tau =   19.995 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.24 s | total =  8876.35 s | avg/turn =   0.4599 s
+[15:16:10] Turn  19400/50000 | sigma_t =   12.182 ps | sigma_z =    3.652 mm | tau =   19.053 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    44.70 s | total =  8921.05 s | avg/turn =   0.4598 s
+[15:16:55] Turn  19500/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   17.907 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.03 s | total =  8966.09 s | avg/turn =   0.4598 s
+[15:17:40] Turn  19600/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   17.533 ps | err_MC = 5.20e-17 | err_HC = 0.00e+00 | block =    45.29 s | total =  9011.38 s | avg/turn =   0.4598 s
+[15:18:26] Turn  19700/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   18.227 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    45.54 s | total =  9056.91 s | avg/turn =   0.4597 s
+[15:19:11] Turn  19800/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   19.372 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    45.44 s | total =  9102.35 s | avg/turn =   0.4597 s
+[15:19:57] Turn  19900/50000 | sigma_t =   12.171 ps | sigma_z =    3.649 mm | tau =   19.985 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    45.28 s | total =  9147.64 s | avg/turn =   0.4597 s
+[15:20:42] Turn  20000/50000 | sigma_t =   12.175 ps | sigma_z =    3.650 mm | tau =   19.562 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.43 s | total =  9193.07 s | avg/turn =   0.4597 s
+[15:21:27] Turn  20100/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.493 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    45.39 s | total =  9238.46 s | avg/turn =   0.4596 s
+[15:22:13] Turn  20200/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   17.698 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.40 s | total =  9283.86 s | avg/turn =   0.4596 s
+[15:22:58] Turn  20300/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   17.844 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.49 s | total =  9329.35 s | avg/turn =   0.4596 s
+[15:23:44] Turn  20400/50000 | sigma_t =   12.207 ps | sigma_z =    3.660 mm | tau =   18.781 ps | err_MC = 5.44e-17 | err_HC = 0.00e+00 | block =    45.59 s | total =  9374.94 s | avg/turn =   0.4596 s
+[15:24:29] Turn  20500/50000 | sigma_t =   12.185 ps | sigma_z =    3.653 mm | tau =   19.693 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.51 s | total =  9420.45 s | avg/turn =   0.4595 s
+[15:25:15] Turn  20600/50000 | sigma_t =   12.172 ps | sigma_z =    3.649 mm | tau =   19.808 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    45.38 s | total =  9465.83 s | avg/turn =   0.4595 s
+[15:26:00] Turn  20700/50000 | sigma_t =   12.187 ps | sigma_z =    3.654 mm | tau =   19.051 ps | err_MC = 5.05e-17 | err_HC = 0.00e+00 | block =    45.49 s | total =  9511.32 s | avg/turn =   0.4595 s
+[15:26:46] Turn  20800/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.088 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    45.57 s | total =  9556.89 s | avg/turn =   0.4595 s
+[15:27:31] Turn  20900/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   17.740 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.47 s | total =  9602.36 s | avg/turn =   0.4594 s
+[15:28:17] Turn  21000/50000 | sigma_t =   12.208 ps | sigma_z =    3.660 mm | tau =   18.284 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.37 s | total =  9647.73 s | avg/turn =   0.4594 s
+[15:29:02] Turn  21100/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   19.234 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.52 s | total =  9693.25 s | avg/turn =   0.4594 s
+[15:29:48] Turn  21200/50000 | sigma_t =   12.179 ps | sigma_z =    3.651 mm | tau =   19.775 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.38 s | total =  9738.63 s | avg/turn =   0.4594 s
+[15:30:33] Turn  21300/50000 | sigma_t =   12.181 ps | sigma_z =    3.652 mm | tau =   19.460 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.30 s | total =  9783.93 s | avg/turn =   0.4593 s
+[15:31:18] Turn  21400/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.580 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    45.41 s | total =  9829.34 s | avg/turn =   0.4593 s
+[15:32:04] Turn  21500/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   17.897 ps | err_MC = 5.15e-17 | err_HC = 0.00e+00 | block =    45.51 s | total =  9874.84 s | avg/turn =   0.4593 s
+[15:32:49] Turn  21600/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   17.983 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.55 s | total =  9920.40 s | avg/turn =   0.4593 s
+[15:33:35] Turn  21700/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.746 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.43 s | total =  9965.82 s | avg/turn =   0.4593 s
+[15:34:20] Turn  21800/50000 | sigma_t =   12.187 ps | sigma_z =    3.654 mm | tau =   19.522 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 10011.18 s | avg/turn =   0.4592 s
+[15:35:06] Turn  21900/50000 | sigma_t =   12.179 ps | sigma_z =    3.651 mm | tau =   19.651 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.54 s | total = 10056.72 s | avg/turn =   0.4592 s
+[15:35:51] Turn  22000/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   19.041 ps | err_MC = 4.63e-17 | err_HC = 0.00e+00 | block =    45.44 s | total = 10102.16 s | avg/turn =   0.4592 s
+[15:36:37] Turn  22100/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.230 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.56 s | total = 10147.72 s | avg/turn =   0.4592 s
+[15:37:23] Turn  22200/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   17.911 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    46.15 s | total = 10193.87 s | avg/turn =   0.4592 s
+[15:38:08] Turn  22300/50000 | sigma_t =   12.207 ps | sigma_z =    3.660 mm | tau =   18.340 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.55 s | total = 10239.42 s | avg/turn =   0.4592 s
+[15:38:54] Turn  22400/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   19.132 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    45.35 s | total = 10284.77 s | avg/turn =   0.4591 s
+[15:39:39] Turn  22500/50000 | sigma_t =   12.177 ps | sigma_z =    3.651 mm | tau =   19.608 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.37 s | total = 10330.14 s | avg/turn =   0.4591 s
+[15:40:25] Turn  22600/50000 | sigma_t =   12.183 ps | sigma_z =    3.652 mm | tau =   19.374 ps | err_MC = 5.31e-17 | err_HC = 0.00e+00 | block =    46.36 s | total = 10376.50 s | avg/turn =   0.4591 s
+[15:41:11] Turn  22700/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.648 ps | err_MC = 5.05e-17 | err_HC = 0.00e+00 | block =    46.09 s | total = 10422.59 s | avg/turn =   0.4591 s
+[15:41:57] Turn  22800/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.058 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.71 s | total = 10468.30 s | avg/turn =   0.4591 s
+[15:42:43] Turn  22900/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   18.100 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    46.01 s | total = 10514.31 s | avg/turn =   0.4591 s
+[15:43:30] Turn  23000/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.720 ps | err_MC = 5.39e-17 | err_HC = 0.00e+00 | block =    46.34 s | total = 10560.66 s | avg/turn =   0.4592 s
+[15:44:17] Turn  23100/50000 | sigma_t =   12.187 ps | sigma_z =    3.654 mm | tau =   19.375 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    47.87 s | total = 10608.53 s | avg/turn =   0.4592 s
+[15:45:05] Turn  23200/50000 | sigma_t =   12.181 ps | sigma_z =    3.652 mm | tau =   19.512 ps | err_MC = 4.63e-17 | err_HC = 0.00e+00 | block =    47.84 s | total = 10656.37 s | avg/turn =   0.4593 s
+[15:45:52] Turn  23300/50000 | sigma_t =   12.188 ps | sigma_z =    3.654 mm | tau =   19.030 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    46.28 s | total = 10702.65 s | avg/turn =   0.4593 s
+[15:46:37] Turn  23400/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.354 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    45.19 s | total = 10747.84 s | avg/turn =   0.4593 s
+[15:47:22] Turn  23500/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   18.062 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.34 s | total = 10793.18 s | avg/turn =   0.4593 s
+[15:48:07] Turn  23600/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   18.389 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.27 s | total = 10838.45 s | avg/turn =   0.4593 s
+[15:48:53] Turn  23700/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   19.043 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.21 s | total = 10883.66 s | avg/turn =   0.4592 s
+[15:49:38] Turn  23800/50000 | sigma_t =   12.187 ps | sigma_z =    3.654 mm | tau =   19.459 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.19 s | total = 10928.84 s | avg/turn =   0.4592 s
+[15:50:25] Turn  23900/50000 | sigma_t =   12.183 ps | sigma_z =    3.653 mm | tau =   19.290 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    47.62 s | total = 10976.46 s | avg/turn =   0.4593 s
+[15:51:14] Turn  24000/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.698 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    48.20 s | total = 11024.66 s | avg/turn =   0.4594 s
+[15:52:00] Turn  24100/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.195 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    46.80 s | total = 11071.45 s | avg/turn =   0.4594 s
+[15:52:46] Turn  24200/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.206 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.42 s | total = 11116.88 s | avg/turn =   0.4594 s
+[15:53:31] Turn  24300/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.706 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.31 s | total = 11162.19 s | avg/turn =   0.4593 s
+[15:54:16] Turn  24400/50000 | sigma_t =   12.189 ps | sigma_z =    3.654 mm | tau =   19.257 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.14 s | total = 11207.32 s | avg/turn =   0.4593 s
+[15:55:02] Turn  24500/50000 | sigma_t =   12.184 ps | sigma_z =    3.653 mm | tau =   19.393 ps | err_MC = 4.40e-17 | err_HC = 0.00e+00 | block =    45.37 s | total = 11252.69 s | avg/turn =   0.4593 s
+[15:55:48] Turn  24600/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   19.009 ps | err_MC = 5.05e-17 | err_HC = 0.00e+00 | block =    45.97 s | total = 11298.67 s | avg/turn =   0.4593 s
+[15:56:33] Turn  24700/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.446 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.68 s | total = 11344.35 s | avg/turn =   0.4593 s
+[15:57:19] Turn  24800/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   18.185 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.31 s | total = 11389.66 s | avg/turn =   0.4593 s
+[15:58:04] Turn  24900/50000 | sigma_t =   12.205 ps | sigma_z =    3.659 mm | tau =   18.438 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.29 s | total = 11434.95 s | avg/turn =   0.4592 s
+[15:58:49] Turn  25000/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.978 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.16 s | total = 11480.10 s | avg/turn =   0.4592 s
+[15:59:34] Turn  25100/50000 | sigma_t =   12.185 ps | sigma_z =    3.653 mm | tau =   19.337 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.26 s | total = 11525.37 s | avg/turn =   0.4592 s
+[16:00:20] Turn  25200/50000 | sigma_t =   12.189 ps | sigma_z =    3.654 mm | tau =   19.217 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.39 s | total = 11570.76 s | avg/turn =   0.4592 s
+[16:01:05] Turn  25300/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.734 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.19 s | total = 11615.95 s | avg/turn =   0.4591 s
+[16:01:50] Turn  25400/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.305 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.39 s | total = 11661.34 s | avg/turn =   0.4591 s
+[16:02:36] Turn  25500/50000 | sigma_t =   12.205 ps | sigma_z =    3.659 mm | tau =   18.294 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.55 s | total = 11706.89 s | avg/turn =   0.4591 s
+[16:03:22] Turn  25600/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.699 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    46.34 s | total = 11753.22 s | avg/turn =   0.4591 s
+[16:04:07] Turn  25700/50000 | sigma_t =   12.187 ps | sigma_z =    3.654 mm | tau =   19.163 ps | err_MC = 5.24e-17 | err_HC = 0.00e+00 | block =    45.40 s | total = 11798.62 s | avg/turn =   0.4591 s
+[16:04:53] Turn  25800/50000 | sigma_t =   12.185 ps | sigma_z =    3.653 mm | tau =   19.295 ps | err_MC = 4.44e-17 | err_HC = 0.00e+00 | block =    45.43 s | total = 11844.05 s | avg/turn =   0.4591 s
+[16:05:38] Turn  25900/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.991 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.33 s | total = 11889.38 s | avg/turn =   0.4590 s
+[16:06:23] Turn  26000/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.522 ps | err_MC = 4.53e-17 | err_HC = 0.00e+00 | block =    45.18 s | total = 11934.56 s | avg/turn =   0.4590 s
+[16:07:09] Turn  26100/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.289 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.49 s | total = 11980.06 s | avg/turn =   0.4590 s
+[16:07:54] Turn  26200/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   18.481 ps | err_MC = 4.53e-17 | err_HC = 0.00e+00 | block =    45.40 s | total = 12025.46 s | avg/turn =   0.4590 s
+[16:08:40] Turn  26300/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.924 ps | err_MC = 4.53e-17 | err_HC = 0.00e+00 | block =    45.21 s | total = 12070.67 s | avg/turn =   0.4590 s
+[16:09:25] Turn  26400/50000 | sigma_t =   12.183 ps | sigma_z =    3.652 mm | tau =   19.235 ps | err_MC = 4.27e-17 | err_HC = 0.00e+00 | block =    45.25 s | total = 12115.92 s | avg/turn =   0.4589 s
+[16:10:10] Turn  26500/50000 | sigma_t =   12.189 ps | sigma_z =    3.654 mm | tau =   19.154 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.41 s | total = 12161.33 s | avg/turn =   0.4589 s
+[16:10:56] Turn  26600/50000 | sigma_t =   12.190 ps | sigma_z =    3.655 mm | tau =   18.762 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.38 s | total = 12206.71 s | avg/turn =   0.4589 s
+[16:11:41] Turn  26700/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.401 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 12252.07 s | avg/turn =   0.4589 s
+[16:12:26] Turn  26800/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   18.375 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.51 s | total = 12297.58 s | avg/turn =   0.4589 s
+[16:13:12] Turn  26900/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.696 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    45.45 s | total = 12343.02 s | avg/turn =   0.4588 s
+[16:13:57] Turn  27000/50000 | sigma_t =   12.186 ps | sigma_z =    3.653 mm | tau =   19.084 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    45.15 s | total = 12388.17 s | avg/turn =   0.4588 s
+[16:14:42] Turn  27100/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   19.207 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.35 s | total = 12433.52 s | avg/turn =   0.4588 s
+[16:15:28] Turn  27200/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.969 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    45.39 s | total = 12478.91 s | avg/turn =   0.4588 s
+[16:16:13] Turn  27300/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.581 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.31 s | total = 12524.22 s | avg/turn =   0.4588 s
+[16:16:58] Turn  27400/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   18.377 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.28 s | total = 12569.51 s | avg/turn =   0.4587 s
+[16:17:44] Turn  27500/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   18.523 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.23 s | total = 12614.74 s | avg/turn =   0.4587 s
+[16:18:29] Turn  27600/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.886 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.34 s | total = 12660.08 s | avg/turn =   0.4587 s
+[16:19:14] Turn  27700/50000 | sigma_t =   12.189 ps | sigma_z =    3.654 mm | tau =   19.154 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.26 s | total = 12705.33 s | avg/turn =   0.4587 s
+[16:20:00] Turn  27800/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   19.102 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 12750.69 s | avg/turn =   0.4587 s
+[16:20:45] Turn  27900/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.782 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.33 s | total = 12796.02 s | avg/turn =   0.4586 s
+[16:21:30] Turn  28000/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.474 ps | err_MC = 5.63e-17 | err_HC = 0.00e+00 | block =    45.33 s | total = 12841.35 s | avg/turn =   0.4586 s
+[16:22:16] Turn  28100/50000 | sigma_t =   12.208 ps | sigma_z =    3.660 mm | tau =   18.436 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 12886.71 s | avg/turn =   0.4586 s
+[16:23:02] Turn  28200/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   18.695 ps | err_MC = 5.48e-17 | err_HC = 0.00e+00 | block =    46.57 s | total = 12933.28 s | avg/turn =   0.4586 s
+[16:23:48] Turn  28300/50000 | sigma_t =   12.188 ps | sigma_z =    3.654 mm | tau =   19.023 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    46.19 s | total = 12979.47 s | avg/turn =   0.4586 s
+[16:24:34] Turn  28400/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   19.140 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.29 s | total = 13024.76 s | avg/turn =   0.4586 s
+[16:25:19] Turn  28500/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.952 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    45.44 s | total = 13070.21 s | avg/turn =   0.4586 s
+[16:26:05] Turn  28600/50000 | sigma_t =   12.190 ps | sigma_z =    3.654 mm | tau =   18.628 ps | err_MC = 5.15e-17 | err_HC = 0.00e+00 | block =    45.49 s | total = 13115.69 s | avg/turn =   0.4586 s
+[16:26:50] Turn  28700/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.447 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.53 s | total = 13161.22 s | avg/turn =   0.4586 s
+[16:27:35] Turn  28800/50000 | sigma_t =   12.207 ps | sigma_z =    3.660 mm | tau =   18.554 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.30 s | total = 13206.52 s | avg/turn =   0.4586 s
+[16:28:21] Turn  28900/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.852 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 13251.88 s | avg/turn =   0.4585 s
+[16:29:06] Turn  29000/50000 | sigma_t =   12.187 ps | sigma_z =    3.654 mm | tau =   19.084 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.30 s | total = 13297.18 s | avg/turn =   0.4585 s
+[16:29:54] Turn  29100/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   19.054 ps | err_MC = 5.28e-17 | err_HC = 0.00e+00 | block =    47.74 s | total = 13344.92 s | avg/turn =   0.4586 s
+[16:30:41] Turn  29200/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.795 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    47.52 s | total = 13392.44 s | avg/turn =   0.4586 s
+[16:31:29] Turn  29300/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.536 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    47.83 s | total = 13440.28 s | avg/turn =   0.4587 s
+[16:32:17] Turn  29400/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.496 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    47.85 s | total = 13488.12 s | avg/turn =   0.4588 s
+[16:33:05] Turn  29500/50000 | sigma_t =   12.197 ps | sigma_z =    3.656 mm | tau =   18.702 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    48.03 s | total = 13536.15 s | avg/turn =   0.4589 s
+[16:33:53] Turn  29600/50000 | sigma_t =   12.190 ps | sigma_z =    3.655 mm | tau =   18.975 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    48.11 s | total = 13584.26 s | avg/turn =   0.4589 s
+[16:34:41] Turn  29700/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   19.078 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    47.86 s | total = 13632.11 s | avg/turn =   0.4590 s
+[16:35:28] Turn  29800/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.928 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    46.64 s | total = 13678.75 s | avg/turn =   0.4590 s
+[16:36:13] Turn  29900/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.661 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 13724.11 s | avg/turn =   0.4590 s
+[16:36:58] Turn  30000/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   18.507 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.49 s | total = 13769.60 s | avg/turn =   0.4590 s
+[16:37:46] Turn  30100/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   18.591 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    48.00 s | total = 13817.60 s | avg/turn =   0.4591 s
+[16:38:32] Turn  30200/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.836 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.61 s | total = 13863.21 s | avg/turn =   0.4590 s
+[16:39:17] Turn  30300/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   19.030 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    45.30 s | total = 13908.52 s | avg/turn =   0.4590 s
+[16:40:03] Turn  30400/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   19.010 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 13953.88 s | avg/turn =   0.4590 s
+[16:40:48] Turn  30500/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.798 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 13999.24 s | avg/turn =   0.4590 s
+[16:41:33] Turn  30600/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.580 ps | err_MC = 5.24e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 14044.59 s | avg/turn =   0.4590 s
+[16:42:20] Turn  30700/50000 | sigma_t =   12.205 ps | sigma_z =    3.659 mm | tau =   18.541 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    46.17 s | total = 14090.76 s | avg/turn =   0.4590 s
+[16:43:08] Turn  30800/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.710 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    47.89 s | total = 14138.65 s | avg/turn =   0.4590 s
+[16:43:56] Turn  30900/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.938 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    48.31 s | total = 14186.96 s | avg/turn =   0.4591 s
+[16:44:42] Turn  31000/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   19.031 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    46.59 s | total = 14233.55 s | avg/turn =   0.4591 s
+[16:45:29] Turn  31100/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.911 ps | err_MC = 4.55e-17 | err_HC = 0.00e+00 | block =    46.50 s | total = 14280.04 s | avg/turn =   0.4592 s
+[16:46:14] Turn  31200/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.686 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.43 s | total = 14325.47 s | avg/turn =   0.4591 s
+[16:46:59] Turn  31300/50000 | sigma_t =   12.205 ps | sigma_z =    3.659 mm | tau =   18.551 ps | err_MC = 4.44e-17 | err_HC = 0.00e+00 | block =    45.08 s | total = 14370.55 s | avg/turn =   0.4591 s
+[16:47:46] Turn  31400/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   18.615 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    46.24 s | total = 14416.79 s | avg/turn =   0.4591 s
+[16:48:32] Turn  31500/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.820 ps | err_MC = 4.55e-17 | err_HC = 0.00e+00 | block =    46.20 s | total = 14462.99 s | avg/turn =   0.4591 s
+[16:49:17] Turn  31600/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   18.992 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.15 s | total = 14508.14 s | avg/turn =   0.4591 s
+[16:50:02] Turn  31700/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.983 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    44.97 s | total = 14553.11 s | avg/turn =   0.4591 s
+[16:50:47] Turn  31800/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.806 ps | err_MC = 4.18e-17 | err_HC = 0.00e+00 | block =    44.77 s | total = 14597.88 s | avg/turn =   0.4591 s
+[16:51:32] Turn  31900/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.616 ps | err_MC = 4.63e-17 | err_HC = 0.00e+00 | block =    45.06 s | total = 14642.94 s | avg/turn =   0.4590 s
+[16:52:17] Turn  32000/50000 | sigma_t =   12.208 ps | sigma_z =    3.660 mm | tau =   18.574 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    44.92 s | total = 14687.86 s | avg/turn =   0.4590 s
+[16:53:01] Turn  32100/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.710 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    44.72 s | total = 14732.58 s | avg/turn =   0.4590 s
+[16:53:47] Turn  32200/50000 | sigma_t =   12.197 ps | sigma_z =    3.656 mm | tau =   18.905 ps | err_MC = 4.48e-17 | err_HC = 0.00e+00 | block =    45.06 s | total = 14777.64 s | avg/turn =   0.4589 s
+[16:54:32] Turn  32300/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.992 ps | err_MC = 4.50e-17 | err_HC = 0.00e+00 | block =    45.02 s | total = 14822.66 s | avg/turn =   0.4589 s
+[16:55:17] Turn  32400/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.900 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    45.05 s | total = 14867.71 s | avg/turn =   0.4589 s
+[16:56:02] Turn  32500/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.712 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.09 s | total = 14912.81 s | avg/turn =   0.4589 s
+[16:56:47] Turn  32600/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.592 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.78 s | total = 14958.59 s | avg/turn =   0.4589 s
+[16:57:35] Turn  32700/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   18.637 ps | err_MC = 4.50e-17 | err_HC = 0.00e+00 | block =    47.12 s | total = 15005.71 s | avg/turn =   0.4589 s
+[16:58:22] Turn  32800/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.804 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    47.32 s | total = 15053.03 s | avg/turn =   0.4589 s
+[16:59:09] Turn  32900/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.949 ps | err_MC = 4.29e-17 | err_HC = 0.00e+00 | block =    47.49 s | total = 15100.51 s | avg/turn =   0.4590 s
+[16:59:55] Turn  33000/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.951 ps | err_MC = 5.05e-17 | err_HC = 0.00e+00 | block =    45.19 s | total = 15145.71 s | avg/turn =   0.4590 s
+[17:00:40] Turn  33100/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.812 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.10 s | total = 15190.81 s | avg/turn =   0.4589 s
+[17:01:25] Turn  33200/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.656 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    45.06 s | total = 15235.87 s | avg/turn =   0.4589 s
+[17:02:10] Turn  33300/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.614 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    44.76 s | total = 15280.63 s | avg/turn =   0.4589 s
+[17:02:54] Turn  33400/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.718 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    44.93 s | total = 15325.56 s | avg/turn =   0.4588 s
+[17:03:39] Turn  33500/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.874 ps | err_MC = 4.07e-17 | err_HC = 0.00e+00 | block =    45.06 s | total = 15370.62 s | avg/turn =   0.4588 s
+[17:04:25] Turn  33600/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.950 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.58 s | total = 15416.20 s | avg/turn =   0.4588 s
+[17:05:12] Turn  33700/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.885 ps | err_MC = 4.48e-17 | err_HC = 0.00e+00 | block =    46.95 s | total = 15463.15 s | avg/turn =   0.4588 s
+[17:05:57] Turn  33800/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.737 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.13 s | total = 15508.28 s | avg/turn =   0.4588 s
+[17:06:42] Turn  33900/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.634 ps | err_MC = 5.26e-17 | err_HC = 0.00e+00 | block =    44.94 s | total = 15553.22 s | avg/turn =   0.4588 s
+[17:07:27] Turn  34000/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.662 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    44.89 s | total = 15598.11 s | avg/turn =   0.4588 s
+[17:08:12] Turn  34100/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.792 ps | err_MC = 4.50e-17 | err_HC = 0.00e+00 | block =    45.11 s | total = 15643.23 s | avg/turn =   0.4587 s
+[17:08:58] Turn  34200/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.914 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.60 s | total = 15688.82 s | avg/turn =   0.4587 s
+[17:09:43] Turn  34300/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.924 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    44.93 s | total = 15733.75 s | avg/turn =   0.4587 s
+[17:10:28] Turn  34400/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.814 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    45.15 s | total = 15778.90 s | avg/turn =   0.4587 s
+[17:11:14] Turn  34500/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.683 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    46.71 s | total = 15825.61 s | avg/turn =   0.4587 s
+[17:12:00] Turn  34600/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.643 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    45.18 s | total = 15870.79 s | avg/turn =   0.4587 s
+[17:12:45] Turn  34700/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.723 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    45.24 s | total = 15916.03 s | avg/turn =   0.4587 s
+[17:13:31] Turn  34800/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.854 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    46.38 s | total = 15962.42 s | avg/turn =   0.4587 s
+[17:14:16] Turn  34900/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.921 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    45.11 s | total = 16007.53 s | avg/turn =   0.4587 s
+[17:15:02] Turn  35000/50000 | sigma_t =   12.190 ps | sigma_z =    3.654 mm | tau =   18.870 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.13 s | total = 16052.66 s | avg/turn =   0.4586 s
+[17:15:47] Turn  35100/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.746 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.21 s | total = 16097.87 s | avg/turn =   0.4586 s
+[17:16:32] Turn  35200/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.656 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    44.86 s | total = 16142.73 s | avg/turn =   0.4586 s
+[17:17:17] Turn  35300/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.674 ps | err_MC = 4.27e-17 | err_HC = 0.00e+00 | block =    45.07 s | total = 16187.80 s | avg/turn =   0.4586 s
+[17:18:04] Turn  35400/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.786 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    47.10 s | total = 16234.90 s | avg/turn =   0.4586 s
+[17:18:49] Turn  35500/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.895 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.41 s | total = 16280.31 s | avg/turn =   0.4586 s
+[17:19:34] Turn  35600/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.908 ps | err_MC = 4.55e-17 | err_HC = 0.00e+00 | block =    45.12 s | total = 16325.43 s | avg/turn =   0.4586 s
+[17:20:20] Turn  35700/50000 | sigma_t =   12.184 ps | sigma_z =    3.653 mm | tau =   18.816 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.36 s | total = 16370.79 s | avg/turn =   0.4586 s
+[17:21:05] Turn  35800/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.702 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.15 s | total = 16415.94 s | avg/turn =   0.4585 s
+[17:21:51] Turn  35900/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.660 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.99 s | total = 16461.93 s | avg/turn =   0.4585 s
+[17:22:38] Turn  36000/50000 | sigma_t =   12.189 ps | sigma_z =    3.654 mm | tau =   18.723 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    46.99 s | total = 16508.92 s | avg/turn =   0.4586 s
+[17:23:23] Turn  36100/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.836 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    45.34 s | total = 16554.26 s | avg/turn =   0.4586 s
+[17:24:08] Turn  36200/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.902 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.12 s | total = 16599.38 s | avg/turn =   0.4585 s
+[17:24:53] Turn  36300/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.865 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    45.19 s | total = 16644.56 s | avg/turn =   0.4585 s
+[17:25:39] Turn  36400/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.761 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.32 s | total = 16689.88 s | avg/turn =   0.4585 s
+[17:26:25] Turn  36500/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   18.680 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    46.48 s | total = 16736.36 s | avg/turn =   0.4585 s
+[17:27:10] Turn  36600/50000 | sigma_t =   12.197 ps | sigma_z =    3.656 mm | tau =   18.689 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    45.05 s | total = 16781.41 s | avg/turn =   0.4585 s
+[17:27:55] Turn  36700/50000 | sigma_t =   12.197 ps | sigma_z =    3.656 mm | tau =   18.780 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    44.72 s | total = 16826.13 s | avg/turn =   0.4585 s
+[17:28:40] Turn  36800/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.871 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.38 s | total = 16871.50 s | avg/turn =   0.4585 s
+[17:29:28] Turn  36900/50000 | sigma_t =   12.197 ps | sigma_z =    3.656 mm | tau =   18.887 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    47.43 s | total = 16918.93 s | avg/turn =   0.4585 s
+[17:30:14] Turn  37000/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.817 ps | err_MC = 5.05e-17 | err_HC = 0.00e+00 | block =    46.12 s | total = 16965.05 s | avg/turn =   0.4585 s
+[17:31:00] Turn  37100/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.722 ps | err_MC = 5.31e-17 | err_HC = 0.00e+00 | block =    46.15 s | total = 17011.20 s | avg/turn =   0.4585 s
+[17:31:46] Turn  37200/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.684 ps | err_MC = 5.33e-17 | err_HC = 0.00e+00 | block =    45.81 s | total = 17057.01 s | avg/turn =   0.4585 s
+[17:32:31] Turn  37300/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.732 ps | err_MC = 4.48e-17 | err_HC = 0.00e+00 | block =    45.00 s | total = 17102.01 s | avg/turn =   0.4585 s
+[17:33:16] Turn  37400/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.823 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.04 s | total = 17147.05 s | avg/turn =   0.4585 s
+[17:34:01] Turn  37500/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   18.877 ps | err_MC = 4.37e-17 | err_HC = 0.00e+00 | block =    45.17 s | total = 17192.21 s | avg/turn =   0.4585 s
+[17:34:46] Turn  37600/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.851 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.15 s | total = 17237.37 s | avg/turn =   0.4584 s
+[17:35:31] Turn  37700/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   18.767 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    44.80 s | total = 17282.16 s | avg/turn =   0.4584 s
+[17:36:17] Turn  37800/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.699 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    46.20 s | total = 17328.36 s | avg/turn =   0.4584 s
+[17:37:05] Turn  37900/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.706 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    47.63 s | total = 17375.99 s | avg/turn =   0.4585 s
+[17:37:50] Turn  38000/50000 | sigma_t =   12.197 ps | sigma_z =    3.656 mm | tau =   18.777 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.60 s | total = 17421.59 s | avg/turn =   0.4585 s
+[17:38:36] Turn  38100/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.854 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.71 s | total = 17467.30 s | avg/turn =   0.4585 s
+[17:39:22] Turn  38200/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.870 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.99 s | total = 17513.30 s | avg/turn =   0.4585 s
+[17:40:09] Turn  38300/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.814 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    46.97 s | total = 17560.26 s | avg/turn =   0.4585 s
+[17:40:55] Turn  38400/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   18.734 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    46.14 s | total = 17606.40 s | avg/turn =   0.4585 s
+[17:41:40] Turn  38500/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.698 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    45.21 s | total = 17651.62 s | avg/turn =   0.4585 s
+[17:42:27] Turn  38600/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.735 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    46.96 s | total = 17698.57 s | avg/turn =   0.4585 s
+[17:43:13] Turn  38700/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.815 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    45.99 s | total = 17744.57 s | avg/turn =   0.4585 s
+[17:43:59] Turn  38800/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.868 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.15 s | total = 17789.72 s | avg/turn =   0.4585 s
+[17:44:44] Turn  38900/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.849 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.22 s | total = 17834.93 s | avg/turn =   0.4585 s
+[17:45:29] Turn  39000/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.776 ps | err_MC = 5.26e-17 | err_HC = 0.00e+00 | block =    45.68 s | total = 17880.62 s | avg/turn =   0.4585 s
+[17:46:15] Turn  39100/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.713 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    45.34 s | total = 17925.96 s | avg/turn =   0.4585 s
+[17:47:00] Turn  39200/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.712 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    45.27 s | total = 17971.23 s | avg/turn =   0.4584 s
+[17:47:46] Turn  39300/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.774 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    45.86 s | total = 18017.09 s | avg/turn =   0.4585 s
+[17:48:32] Turn  39400/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.842 ps | err_MC = 4.96e-17 | err_HC = 0.00e+00 | block =    46.06 s | total = 18063.15 s | avg/turn =   0.4585 s
+[17:49:18] Turn  39500/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.859 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    45.59 s | total = 18108.74 s | avg/turn =   0.4584 s
+[17:50:04] Turn  39600/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.812 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    46.14 s | total = 18154.88 s | avg/turn =   0.4585 s
+[17:50:50] Turn  39700/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.741 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    46.33 s | total = 18201.21 s | avg/turn =   0.4585 s
+[17:51:36] Turn  39800/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.708 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.46 s | total = 18246.67 s | avg/turn =   0.4585 s
+[17:52:22] Turn  39900/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.740 ps | err_MC = 5.15e-17 | err_HC = 0.00e+00 | block =    46.01 s | total = 18292.68 s | avg/turn =   0.4585 s
+[17:53:07] Turn  40000/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   18.807 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.33 s | total = 18338.01 s | avg/turn =   0.4585 s
+[17:53:52] Turn  40100/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.852 ps | err_MC = 4.50e-17 | err_HC = 0.00e+00 | block =    45.23 s | total = 18383.24 s | avg/turn =   0.4584 s
+[17:54:38] Turn  40200/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.841 ps | err_MC = 5.22e-17 | err_HC = 0.00e+00 | block =    45.59 s | total = 18428.83 s | avg/turn =   0.4584 s
+[17:55:23] Turn  40300/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.782 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    45.60 s | total = 18474.43 s | avg/turn =   0.4584 s
+[17:56:09] Turn  40400/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.727 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    45.45 s | total = 18519.88 s | avg/turn =   0.4584 s
+[17:56:54] Turn  40500/50000 | sigma_t =   12.190 ps | sigma_z =    3.655 mm | tau =   18.723 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.59 s | total = 18565.47 s | avg/turn =   0.4584 s
+[17:57:40] Turn  40600/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.771 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    46.12 s | total = 18611.59 s | avg/turn =   0.4584 s
+[17:58:28] Turn  40700/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.829 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    47.81 s | total = 18659.40 s | avg/turn =   0.4585 s
+[17:59:14] Turn  40800/50000 | sigma_t =   12.190 ps | sigma_z =    3.654 mm | tau =   18.846 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    46.21 s | total = 18705.61 s | avg/turn =   0.4585 s
+[18:00:00] Turn  40900/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.810 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.70 s | total = 18751.31 s | avg/turn =   0.4585 s
+[18:00:45] Turn  41000/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.752 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.25 s | total = 18796.56 s | avg/turn =   0.4585 s
+[18:01:31] Turn  41100/50000 | sigma_t =   12.190 ps | sigma_z =    3.655 mm | tau =   18.722 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    45.59 s | total = 18842.15 s | avg/turn =   0.4584 s
+[18:02:17] Turn  41200/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.746 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.50 s | total = 18887.66 s | avg/turn =   0.4584 s
+[18:03:02] Turn  41300/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.803 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    45.17 s | total = 18932.83 s | avg/turn =   0.4584 s
+[18:03:49] Turn  41400/50000 | sigma_t =   12.190 ps | sigma_z =    3.654 mm | tau =   18.844 ps | err_MC = 5.15e-17 | err_HC = 0.00e+00 | block =    47.45 s | total = 18980.28 s | avg/turn =   0.4585 s
+[18:04:35] Turn  41500/50000 | sigma_t =   12.189 ps | sigma_z =    3.654 mm | tau =   18.834 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    45.90 s | total = 19026.17 s | avg/turn =   0.4585 s
+[18:05:20] Turn  41600/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.782 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.28 s | total = 19071.45 s | avg/turn =   0.4584 s
+[18:06:06] Turn  41700/50000 | sigma_t =   12.189 ps | sigma_z =    3.654 mm | tau =   18.736 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.82 s | total = 19117.28 s | avg/turn =   0.4584 s
+[18:06:52] Turn  41800/50000 | sigma_t =   12.190 ps | sigma_z =    3.655 mm | tau =   18.734 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.68 s | total = 19162.96 s | avg/turn =   0.4584 s
+[18:07:37] Turn  41900/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.774 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.27 s | total = 19208.23 s | avg/turn =   0.4584 s
+[18:08:23] Turn  42000/50000 | sigma_t =   12.190 ps | sigma_z =    3.655 mm | tau =   18.822 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.71 s | total = 19253.94 s | avg/turn =   0.4584 s
+[18:09:09] Turn  42100/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.837 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.76 s | total = 19299.69 s | avg/turn =   0.4584 s
+[18:09:54] Turn  42200/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.807 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.43 s | total = 19345.12 s | avg/turn =   0.4584 s
+[18:10:40] Turn  42300/50000 | sigma_t =   12.187 ps | sigma_z =    3.653 mm | tau =   18.758 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    45.65 s | total = 19390.78 s | avg/turn =   0.4584 s
+[18:11:25] Turn  42400/50000 | sigma_t =   12.188 ps | sigma_z =    3.654 mm | tau =   18.735 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    45.80 s | total = 19436.57 s | avg/turn =   0.4584 s
+[18:12:11] Turn  42500/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.754 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.21 s | total = 19481.78 s | avg/turn =   0.4584 s
+[18:12:56] Turn  42600/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.798 ps | err_MC = 5.26e-17 | err_HC = 0.00e+00 | block =    45.60 s | total = 19527.39 s | avg/turn =   0.4584 s
+[18:13:42] Turn  42700/50000 | sigma_t =   12.190 ps | sigma_z =    3.654 mm | tau =   18.831 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.67 s | total = 19573.05 s | avg/turn =   0.4584 s
+[18:14:27] Turn  42800/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.822 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    44.92 s | total = 19617.97 s | avg/turn =   0.4584 s
+[18:15:12] Turn  42900/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.781 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.50 s | total = 19663.47 s | avg/turn =   0.4584 s
+[18:15:58] Turn  43000/50000 | sigma_t =   12.189 ps | sigma_z =    3.654 mm | tau =   18.745 ps | err_MC = 4.48e-17 | err_HC = 0.00e+00 | block =    45.70 s | total = 19709.17 s | avg/turn =   0.4584 s
+[18:16:43] Turn  43100/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.741 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.37 s | total = 19754.54 s | avg/turn =   0.4583 s
+[18:17:29] Turn  43200/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.773 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    45.59 s | total = 19800.13 s | avg/turn =   0.4583 s
+[18:18:15] Turn  43300/50000 | sigma_t =   12.190 ps | sigma_z =    3.654 mm | tau =   18.813 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.68 s | total = 19845.81 s | avg/turn =   0.4583 s
+[18:19:00] Turn  43400/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.828 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.08 s | total = 19890.90 s | avg/turn =   0.4583 s
+[18:19:45] Turn  43500/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.808 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.15 s | total = 19936.05 s | avg/turn =   0.4583 s
+[18:20:31] Turn  43600/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.768 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.61 s | total = 19981.66 s | avg/turn =   0.4583 s
+[18:21:16] Turn  43700/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.743 ps | err_MC = 5.24e-17 | err_HC = 0.00e+00 | block =    45.50 s | total = 20027.16 s | avg/turn =   0.4583 s
+[18:22:01] Turn  43800/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.753 ps | err_MC = 4.61e-17 | err_HC = 0.00e+00 | block =    45.42 s | total = 20072.58 s | avg/turn =   0.4583 s
+[18:22:48] Turn  43900/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.790 ps | err_MC = 4.31e-17 | err_HC = 0.00e+00 | block =    46.26 s | total = 20118.83 s | avg/turn =   0.4583 s
+[18:23:33] Turn  44000/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.821 ps | err_MC = 4.40e-17 | err_HC = 0.00e+00 | block =    45.54 s | total = 20164.37 s | avg/turn =   0.4583 s
+[18:24:19] Turn  44100/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.820 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.38 s | total = 20209.75 s | avg/turn =   0.4583 s
+[18:25:04] Turn  44200/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.788 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    45.83 s | total = 20255.58 s | avg/turn =   0.4583 s
+[18:25:50] Turn  44300/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.754 ps | err_MC = 4.76e-17 | err_HC = 0.00e+00 | block =    45.42 s | total = 20301.00 s | avg/turn =   0.4583 s
+[18:26:35] Turn  44400/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.746 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    44.91 s | total = 20345.91 s | avg/turn =   0.4582 s
+[18:27:22] Turn  44500/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.771 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    47.21 s | total = 20393.12 s | avg/turn =   0.4583 s
+[18:28:08] Turn  44600/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.809 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    45.56 s | total = 20438.68 s | avg/turn =   0.4583 s
+[18:28:55] Turn  44700/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.824 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    47.65 s | total = 20486.33 s | avg/turn =   0.4583 s
+[18:29:42] Turn  44800/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.805 ps | err_MC = 4.85e-17 | err_HC = 0.00e+00 | block =    46.45 s | total = 20532.78 s | avg/turn =   0.4583 s
+[18:30:27] Turn  44900/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.770 ps | err_MC = 4.98e-17 | err_HC = 0.00e+00 | block =    45.51 s | total = 20578.29 s | avg/turn =   0.4583 s
+[18:31:12] Turn  45000/50000 | sigma_t =   12.200 ps | sigma_z =    3.658 mm | tau =   18.749 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    45.26 s | total = 20623.55 s | avg/turn =   0.4583 s
+[18:31:58] Turn  45100/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.759 ps | err_MC = 5.15e-17 | err_HC = 0.00e+00 | block =    45.84 s | total = 20669.39 s | avg/turn =   0.4583 s
+[18:32:44] Turn  45200/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.790 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    46.19 s | total = 20715.59 s | avg/turn =   0.4583 s
+[18:33:31] Turn  45300/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.817 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    46.67 s | total = 20762.25 s | avg/turn =   0.4583 s
+[18:34:18] Turn  45400/50000 | sigma_t =   12.191 ps | sigma_z =    3.655 mm | tau =   18.816 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    46.97 s | total = 20809.22 s | avg/turn =   0.4584 s
+[18:35:05] Turn  45500/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.788 ps | err_MC = 4.74e-17 | err_HC = 0.00e+00 | block =    46.99 s | total = 20856.21 s | avg/turn =   0.4584 s
+[18:35:50] Turn  45600/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.757 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    45.13 s | total = 20901.34 s | avg/turn =   0.4584 s
+[18:36:36] Turn  45700/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.751 ps | err_MC = 4.44e-17 | err_HC = 0.00e+00 | block =    45.62 s | total = 20946.96 s | avg/turn =   0.4584 s
+[18:37:21] Turn  45800/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.775 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.62 s | total = 20992.59 s | avg/turn =   0.4584 s
+[18:38:07] Turn  45900/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.807 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    45.50 s | total = 21038.08 s | avg/turn =   0.4583 s
+[18:38:53] Turn  46000/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.819 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.78 s | total = 21083.87 s | avg/turn =   0.4583 s
+[18:39:38] Turn  46100/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.800 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.57 s | total = 21129.43 s | avg/turn =   0.4583 s
+[18:40:24] Turn  46200/50000 | sigma_t =   12.203 ps | sigma_z =    3.659 mm | tau =   18.768 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.28 s | total = 21174.71 s | avg/turn =   0.4583 s
+[18:41:09] Turn  46300/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.749 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    45.69 s | total = 21220.40 s | avg/turn =   0.4583 s
+[18:41:55] Turn  46400/50000 | sigma_t =   12.193 ps | sigma_z =    3.655 mm | tau =   18.760 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.59 s | total = 21265.99 s | avg/turn =   0.4583 s
+[18:42:40] Turn  46500/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.791 ps | err_MC = 5.07e-17 | err_HC = 0.00e+00 | block =    45.31 s | total = 21311.31 s | avg/turn =   0.4583 s
+[18:43:26] Turn  46600/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.816 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.93 s | total = 21357.23 s | avg/turn =   0.4583 s
+[18:44:12] Turn  46700/50000 | sigma_t =   12.192 ps | sigma_z =    3.655 mm | tau =   18.814 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.41 s | total = 21402.64 s | avg/turn =   0.4583 s
+[18:44:58] Turn  46800/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.787 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    46.09 s | total = 21448.73 s | avg/turn =   0.4583 s
+[18:45:46] Turn  46900/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.759 ps | err_MC = 5.02e-17 | err_HC = 0.00e+00 | block =    48.01 s | total = 21496.75 s | avg/turn =   0.4584 s
+[18:46:33] Turn  47000/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.753 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    47.79 s | total = 21544.54 s | avg/turn =   0.4584 s
+[18:47:19] Turn  47100/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.774 ps | err_MC = 4.46e-17 | err_HC = 0.00e+00 | block =    45.26 s | total = 21589.80 s | avg/turn =   0.4584 s
+[18:48:04] Turn  47200/50000 | sigma_t =   12.201 ps | sigma_z =    3.658 mm | tau =   18.803 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    45.58 s | total = 21635.38 s | avg/turn =   0.4584 s
+[18:48:50] Turn  47300/50000 | sigma_t =   12.195 ps | sigma_z =    3.656 mm | tau =   18.814 ps | err_MC = 4.48e-17 | err_HC = 0.00e+00 | block =    45.61 s | total = 21680.99 s | avg/turn =   0.4584 s
+[18:49:35] Turn  47400/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.800 ps | err_MC = 4.87e-17 | err_HC = 0.00e+00 | block =    45.11 s | total = 21726.10 s | avg/turn =   0.4584 s
+[18:50:20] Turn  47500/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   18.773 ps | err_MC = 4.83e-17 | err_HC = 0.00e+00 | block =    45.50 s | total = 21771.59 s | avg/turn =   0.4583 s
+[18:51:06] Turn  47600/50000 | sigma_t =   12.197 ps | sigma_z =    3.657 mm | tau =   18.756 ps | err_MC = 4.92e-17 | err_HC = 0.00e+00 | block =    45.87 s | total = 21817.47 s | avg/turn =   0.4584 s
+[18:51:52] Turn  47700/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.764 ps | err_MC = 4.66e-17 | err_HC = 0.00e+00 | block =    45.49 s | total = 21862.96 s | avg/turn =   0.4583 s
+[18:52:37] Turn  47800/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   18.789 ps | err_MC = 4.55e-17 | err_HC = 0.00e+00 | block =    45.56 s | total = 21908.52 s | avg/turn =   0.4583 s
+[18:53:23] Turn  47900/50000 | sigma_t =   12.202 ps | sigma_z =    3.658 mm | tau =   18.809 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    45.60 s | total = 21954.13 s | avg/turn =   0.4583 s
+[18:54:08] Turn  48000/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.807 ps | err_MC = 5.13e-17 | err_HC = 0.00e+00 | block =    45.03 s | total = 21999.16 s | avg/turn =   0.4583 s
+[18:54:53] Turn  48100/50000 | sigma_t =   12.200 ps | sigma_z =    3.657 mm | tau =   18.786 ps | err_MC = 4.72e-17 | err_HC = 0.00e+00 | block =    45.42 s | total = 22044.58 s | avg/turn =   0.4583 s
+[18:55:39] Turn  48200/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   18.765 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.60 s | total = 22090.18 s | avg/turn =   0.4583 s
+[18:56:25] Turn  48300/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.763 ps | err_MC = 4.57e-17 | err_HC = 0.00e+00 | block =    45.47 s | total = 22135.66 s | avg/turn =   0.4583 s
+[18:57:10] Turn  48400/50000 | sigma_t =   12.196 ps | sigma_z =    3.656 mm | tau =   18.779 ps | err_MC = 4.89e-17 | err_HC = 0.00e+00 | block =    45.44 s | total = 22181.09 s | avg/turn =   0.4583 s
+[18:57:55] Turn  48500/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   18.798 ps | err_MC = 4.81e-17 | err_HC = 0.00e+00 | block =    45.52 s | total = 22226.62 s | avg/turn =   0.4583 s
+[18:58:41] Turn  48600/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.807 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.56 s | total = 22272.18 s | avg/turn =   0.4583 s
+[18:59:26] Turn  48700/50000 | sigma_t =   12.194 ps | sigma_z =    3.656 mm | tau =   18.797 ps | err_MC = 4.63e-17 | err_HC = 0.00e+00 | block =    45.25 s | total = 22317.43 s | avg/turn =   0.4583 s
+[19:00:12] Turn  48800/50000 | sigma_t =   12.204 ps | sigma_z =    3.659 mm | tau =   18.776 ps | err_MC = 4.63e-17 | err_HC = 0.00e+00 | block =    45.47 s | total = 22362.89 s | avg/turn =   0.4583 s
+[19:00:58] Turn  48900/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   18.764 ps | err_MC = 4.68e-17 | err_HC = 0.00e+00 | block =    45.77 s | total = 22408.67 s | avg/turn =   0.4583 s
+[19:01:43] Turn  49000/50000 | sigma_t =   12.197 ps | sigma_z =    3.656 mm | tau =   18.770 ps | err_MC = 5.09e-17 | err_HC = 0.00e+00 | block =    45.26 s | total = 22453.93 s | avg/turn =   0.4582 s
+[19:02:28] Turn  49100/50000 | sigma_t =   12.203 ps | sigma_z =    3.658 mm | tau =   18.788 ps | err_MC = 4.94e-17 | err_HC = 0.00e+00 | block =    45.18 s | total = 22499.10 s | avg/turn =   0.4582 s
+[19:03:14] Turn  49200/50000 | sigma_t =   12.208 ps | sigma_z =    3.660 mm | tau =   18.804 ps | err_MC = 5.00e-17 | err_HC = 0.00e+00 | block =    45.75 s | total = 22544.86 s | avg/turn =   0.4582 s
+[19:03:59] Turn  49300/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.803 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.22 s | total = 22590.08 s | avg/turn =   0.4582 s
+[19:04:44] Turn  49400/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.786 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.02 s | total = 22635.10 s | avg/turn =   0.4582 s
+[19:05:30] Turn  49500/50000 | sigma_t =   12.211 ps | sigma_z =    3.661 mm | tau =   18.767 ps | err_MC = 4.59e-17 | err_HC = 0.00e+00 | block =    45.63 s | total = 22680.73 s | avg/turn =   0.4582 s
+[19:06:15] Turn  49600/50000 | sigma_t =   12.205 ps | sigma_z =    3.659 mm | tau =   18.763 ps | err_MC = 5.18e-17 | err_HC = 0.00e+00 | block =    45.30 s | total = 22726.03 s | avg/turn =   0.4582 s
+[19:07:00] Turn  49700/50000 | sigma_t =   12.199 ps | sigma_z =    3.657 mm | tau =   18.779 ps | err_MC = 5.26e-17 | err_HC = 0.00e+00 | block =    45.09 s | total = 22771.12 s | avg/turn =   0.4582 s
+[19:07:46] Turn  49800/50000 | sigma_t =   12.206 ps | sigma_z =    3.659 mm | tau =   18.800 ps | err_MC = 4.70e-17 | err_HC = 0.00e+00 | block =    45.56 s | total = 22816.68 s | avg/turn =   0.4582 s
+[19:08:31] Turn  49900/50000 | sigma_t =   12.205 ps | sigma_z =    3.659 mm | tau =   18.807 ps | err_MC = 5.11e-17 | err_HC = 0.00e+00 | block =    45.27 s | total = 22861.95 s | avg/turn =   0.4582 s
+[19:09:16] Turn  50000/50000 | sigma_t =   12.198 ps | sigma_z =    3.657 mm | tau =   18.795 ps | err_MC = 4.79e-17 | err_HC = 0.00e+00 | block =    44.90 s | total = 22906.85 s | avg/turn =   0.4581 s
+
+=== TRACKING FINISHED ===
+Wall-clock time: 22906.89 s
+
+=== FINAL COMPARISON ===
+Final sigma_t, last point        : 12.198 ps   | target 12.445 ps
+Final sigma_z, last point        : 3.657 mm   | target 3.731 mm
+Final sigma_t, last 100 avg : 12.196 ps   | target 12.445 ps
+Final sigma_z, last 100 avg : 3.656 mm   | target 3.731 mm
+
+=== CAVITY DIAGNOSTICS ===
+MC total voltage / cavity        : 400.000 kV
+MC beam-loading voltage / cavity : 318.489 kV
+MC detune used in mbtrack2       : -36285.871964 Hz
+HC total voltage / cavity        : 100.000 kV
+HC beam-loading voltage / cavity : 97.970 kV
+HC detune used in mbtrack2       : 373522.941918 Hz
+
+=== MPI PROGRAM FINISHED CLEANLY ===

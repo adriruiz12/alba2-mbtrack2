@@ -1,0 +1,13 @@
+SDDS2
+&description contents="csv2sdds conversion of Amp_PropPath.csv", &end
+&parameter name=Filename, description="Name of file from which this page came", type=string, &end
+&parameter name=NumberCombined, description="Number of files combined to make this file", type=long, &end
+&column name=numerator, type=double, &end
+&column name=denominator, type=double, &end
+&data mode=ascii, &end
+!page number 1
+FeedbackFilters.sdds
+1
+	2
+0.01 1.0 
+0.0 -0.9999 

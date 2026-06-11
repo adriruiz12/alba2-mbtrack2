@@ -1,0 +1,68 @@
+ALBA II longitudinal tracking with mbtrack2
+==========================================
+
+Validation case                 : flat_potential
+USE_HC                          : True
+
+Turns                          : 50000
+Macro-particles per bunch      : 10000
+Total beam current             : 0.300000 A
+Harmonic number                : 448
+Circumference                  : 268.800000000000 m
+Main RF frequency              : 4.996540966667e+08 Hz
+MPI ranks                      : 16
+MPI bunch partition            : 28 bunches per rank
+Cavity n_bin                   : 201
+Profile n_bin                  : 201
+
+Main cavity:
+  Ncav                         : 6
+  Vc(total)                    : 2.400000e+06 V
+  Vc(per cavity)               : 4.000000e+05 V
+  theta(cos convention)        : 59.934574 deg
+  resonance frequency          : 4.996178107947e+08 Hz
+  Elegant drive_frequency      : 4.996540894184e+08 Hz
+  detune used in mbtrack2      : -36285.871964 Hz
+
+Harmonic cavity:
+  Ncav                         : 4
+  Vc(total)                    : 7.043518e+05 V
+  Vc(per cavity)               : 1.760880e+05 V
+  theta(cos convention)        : 259.023576 deg
+  resonance frequency          : 1.499174403546e+09 Hz
+  Elegant drive_frequency      : 1.498962268255e+09 Hz
+  detune used in mbtrack2      : 212113.546272 Hz
+  Rs(per cavity, storage ring) : 1.100000e+06 Ohm
+
+Equilibrium pre-check:
+  sigma_z(eq)                  : 11.450529 mm
+  sigma_t(eq)                  : 38.194855 ps
+  sigma_z target               : 11.897168 mm
+  sigma_t target               : 39.684680 ps
+  rel. error sigma_z(eq)       : -3.754157%
+  rel. error sigma_t(eq)       : -3.754157%
+  center of mass(eq)           : -15.814598 ps
+
+Final tracking result, last saved point:
+  sigma_z(final)               : 11.113778 mm
+  sigma_t(final)               : 37.071574 ps
+  sigma_z target               : 11.897168 mm
+  sigma_t target               : 39.684680 ps
+  rel. error sigma_z           : -6.584673%
+  rel. error sigma_t           : -6.584673%
+
+Final tracking result, average of last 100 saved points:
+  sigma_z(avg)                 : 11.114360 mm
+  sigma_t(avg)                 : 37.073516 ps
+  rel. error sigma_z(avg)      : -6.579778%
+  rel. error sigma_t(avg)      : -6.579778%
+
+Final cavity diagnostics, average of last saved points:
+  V_MC per cavity              : 400.000 kV
+  I_g (MC)                     : 0.8665 A
+  V_HC per cavity              : 176.088 kV
+  I_g (HC)                     : 0.1074 A
+  Mean beam energy             : 2999.960 MeV
+
+Wall-clock time                : 7178.846184 s
+Relativistic beta              : 0.999999985493

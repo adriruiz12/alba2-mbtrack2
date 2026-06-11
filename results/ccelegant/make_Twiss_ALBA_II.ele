@@ -1,0 +1,58 @@
+
+
+! This tells elegant which lattice and ring to load
+
+&run_setup
+    lattice = A2L006C_20251112.lte
+    p_central_mev = 3.0e3
+    use_beamline= RING_TWISS
+    default_order = 3
+&end
+
+
+! this iterates the sextupole values to make the dnu/dp = 0! 
+! SV* uses all sextupoles, but it takes long and does not converge well
+
+&chromaticity
+    sextupoles = "SV11 SH11", 
+	n_iterations = 100,
+    change_defined_values = 1,
+    dnux_dp = 0,
+    dnuy_dp = 0,
+    tolerance = 0.00001
+&end
+
+&run_control &end
+&bunched_beam &end
+&track &end
+
+
+! Now, we save the new lattice parameters for 0 chromaticity
+
+&save_lattice filename="A2L006C_20251112.new" &end
+
+
+! Load the new lattice
+
+&run_setup
+    lattice = "A2L006C_20251112.new",
+    p_central_mev = 3.0e3,
+    use_beamline ="RING_TWISS"
+&end
+
+
+! Then we calculate a Twiss file with the new lattice
+! Radiation_integrals - A flag indicating, if set, that radiation integrals should be computed and included in output.
+! There is no need to correct the chromaticity, the main parameters important for us (alphac, U0, etc) remain unnafected after correcting it
+! And, by the way, to correct it varying only one sextupole vertical and another horizontal, seems to be enough
+
+
+&twiss_output 
+    filename = twiss_ALBA_II.twi
+    matched = 1
+	radiation_integrals = 1
+	higher_order_chromaticity
+	statistics=1	 
+&end
+
+

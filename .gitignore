@@ -1,5 +1,10 @@
-# Generated simulation outputs
-results/
+# Ignore heavy raw simulation outputs
+results/ccelegant/track_*
+results/ccelegant/watch.*
+results/**/*.h5
+results/**/*.npy
+results/**/*.npz
+results/**/*.pkl
 
 # Python
 __pycache__/
@@ -21,5 +26,4 @@ env/
 *~
 
 # Jupyter (if used for analysis)
-.ipynb_checkpoints/
-paramsalba.zip
+.ipynb_checkpoints/repo.zip

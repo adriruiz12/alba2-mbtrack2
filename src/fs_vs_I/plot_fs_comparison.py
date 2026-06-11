@@ -118,8 +118,6 @@ for fname, kw in EXP_FILES:
 ax.set_xlabel(r'Stored current $I_{sr}$ [mA]',                   fontsize=12)
 ax.set_ylabel(r'Coherent synchrotron frequency $f_s$ [kHz]',     fontsize=12)
 ax.grid(True, alpha=0.3)
-ax.set_title(r'Coherent $f_s$ vs $I_{sr}$: theory vs. ALBA-I measurements',
-             fontsize=11)
 ax.set_xlim(0, 355)
 ax.set_ylim(bottom=0)
 ax.xaxis.set_minor_locator(ticker.AutoMinorLocator(5))
