@@ -29,7 +29,7 @@ The SLURM script runs the four cases sequentially.
 
     (*) Same operating point as 'goal' but the HC resonance frequency is taken
     directly from the Elegant template (track_ALBA_II.ele line 150) instead of
-    the analytical paramsalba detuning. Isolates the ~66 kHz FREQ_HC mismatch
+    the analytical paramsalba detuning. Isolates the ~5.9 kHz FREQ_HC mismatch
     between the two codes.
 
 All numerical targets come from the reference paramsalba results.
