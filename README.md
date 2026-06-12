@@ -77,7 +77,7 @@ alba2-mbtrack2/
 │   ├── simulation/             ← tracking modules + replot.py
 │   └── fs_vs_I/                ← fs_analytical.py, plot_fs_comparison.py,
 │                                 exp_*.csv (tracked inputs)
-└── results/                    ← generated at runtime, not tracked by git
+└── results/                    
 ```
 
 ## How to run
