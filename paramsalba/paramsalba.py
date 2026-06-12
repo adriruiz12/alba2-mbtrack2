@@ -284,7 +284,8 @@ def phasor_plot(I_b, I_g, V_b, V_g, V_c, info_text=None, currents_text=None,
     currents_text : str or None
         Optional current-values text box placed in the bottom-right corner.
     psi_d : float or None
-        Detuning angle [rad].  If given, an arc is drawn between -I_b and V_b.
+        Detuning angle [rad].  If given, two arcs are drawn: I_b -> V_b and
+        I_g -> V_g (both pairs differ by the phase of Z_L, i.e. by psi_d).
     phi_s : float or None
         Synchronous phase [rad].  Used only when draw_phi_s is True.
     draw_phi_s : bool
@@ -401,12 +402,25 @@ def phasor_plot(I_b, I_g, V_b, V_g, V_c, info_text=None, currents_text=None,
     )
 
     # ---- angle arcs
-    # psi_d: between -I_b direction and V_b direction (this matches the reference plots)
+    # psi_d is the phase of the loaded impedance Z_L, so it appears twice
+    # (as in the reference plots): V_b = Z_L I_b and V_g = Z_L I_g are both
+    # rotated by psi_d with respect to their driving currents.
     if psi_d is not None:
-        th_minus_ib = np.degrees(np.angle(-I_b))
+        # Cap each arc radius so it never overshoots the phasors it connects
+        # (e.g. HC: |V_g| is much shorter than the plot scale).
+        # (1) between I_b and V_b
+        th_ib = np.degrees(np.angle(I_b))
         th_vb = np.degrees(np.angle(V_b))
-        draw_angle_arc(ax, th_minus_ib, th_vb, radius=0.12 * min(Lx, Ly),
+        r1 = min(0.16 * min(Lx, Ly), 0.9 * I_vis_len, 0.9 * abs(V_b))
+        draw_angle_arc(ax, th_ib, th_vb, radius=r1,
             label=r"$\psi_d$", text_offset_pts=(-6, -2))
+
+        # (2) between I_g and V_g
+        th_ig = np.degrees(np.angle(I_g))
+        th_vg = np.degrees(np.angle(V_g))
+        r2 = min(0.24 * min(Lx, Ly), 0.9 * I_vis_len, 0.9 * abs(V_g))
+        draw_angle_arc(ax, th_ig, th_vg, radius=r2,
+            label=r"$\psi_d$", text_offset_pts=(6, 2))
 
     # phi_s: between -Im axis (-90°) and V_c phasor angle
     # because phi_c = phi_s - 90°
