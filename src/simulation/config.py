@@ -23,9 +23,9 @@ The SLURM script runs the four cases sequentially.
     -------             --------------   --------------   --------------
     no_hc               —                 2.463 mm          8.216 ps
     hc_100kv            100 kV            3.731 mm         12.445 ps
-    goal                170 kV            9.630 mm         32.150 ps
+    goal                170 kV            9.638 mm         32.150 ps
     flat_potential      ~176 kV          11.897 mm         39.685 ps
-    goal_elegant_freq   170 kV            9.630 mm         32.150 ps  (*)
+    goal_elegant_freq   170 kV            9.638 mm         32.150 ps  (*)
 
     (*) Same operating point as 'goal' but the HC resonance frequency is taken
     directly from the Elegant template (track_ALBA_II.ele line 150) instead of
@@ -153,17 +153,17 @@ CASE_CONFIG = {
     "goal": {
         "use_hc": True,
         "V_HC_PER_CAVITY_V": 170e3,
-        "TARGET_SIGMA_Z_MM": 9.630000,
+        "TARGET_SIGMA_Z_MM": 9.638328,
         "TARGET_SIGMA_T_PS": 32.150000,
     },
     "goal_elegant_freq": {
     # Same operating point as 'goal' but the HC resonance frequency is taken directly
     # from the Elegant template (track_ALBA_II.ele), not from the analytical
-    # paramsalba detuning. This isolates the impact of the ~66 kHz FREQ_HC mismatch
+    # paramsalba detuning. This isolates the impact of the ~5.9 kHz FREQ_HC mismatch
     # between the two codes for the Elegant cross-check.
         "use_hc": True,
         "V_HC_PER_CAVITY_V": 170e3,
-        "TARGET_SIGMA_Z_MM": 9.630000,
+        "TARGET_SIGMA_Z_MM": 9.638328,
         "TARGET_SIGMA_T_PS": 32.150000,
         "FREQ_HC_RESONANCE_HZ_OVERRIDE": 1.499176140487614e9,
     },
